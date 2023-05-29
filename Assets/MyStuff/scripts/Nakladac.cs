@@ -51,5 +51,6 @@ public class Nakladac : MonoBehaviour
         agent.destination = GoAwayPoition.position;
         StopCoroutine("Transfer");
         Destroy(gameObject, 10);
+        SpawnerOfEnemies.Instance.SpawnNakladac();
     }
 }

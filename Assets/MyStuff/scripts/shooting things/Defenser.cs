@@ -19,12 +19,12 @@ public class Defenser : Shooter
     {
         dragItem = GetComponent<DraggableItem>();
         currentHealth = maxHealth;
-        nextFireTime = Time.time + 3;
+        nextFireTime = Time.time + 5;
     }
 
     public void Update()
     {
-        if (Time.time >= nextFireTime)
+        if (Time.time >= nextFireTime && !GameplayManager.instance.end)
         {
             if (SpawnerOfEnemies.Instance.enemiesOnField.Count > 0 && !dragItem.isDragging)
             {
@@ -40,7 +40,7 @@ public class Defenser : Shooter
 
         if (currentHealth <= 0)
         {
-            Death();
+            Death(false, gameObject);
         }
     }
 }

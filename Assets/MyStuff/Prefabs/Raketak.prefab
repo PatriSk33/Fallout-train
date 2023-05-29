@@ -113,7 +113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1cc7ab9deff2364ab727f91d90c4666, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 30
   damage: 10
   fireRate: 5
   bulletPrefab: {fileID: 3796342937348240760, guid: 154dd4465a9ff8140a9acec5eda6ffa9,

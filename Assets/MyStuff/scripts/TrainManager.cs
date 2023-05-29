@@ -29,9 +29,15 @@ public class TrainManager : MonoBehaviour
 
     private void Update()
     {
-        if (vagonsToAttack.Count == 0) {
+        if (vagonsToAttack.Count == 0 || defensers.Count == 0) {
             failed = true;
+            GameplayManager.instance.continueToTownText.text = "Back to Town";
+            GameplayManager.instance.end = true;
             failText.text = "Failed!";
+        }
+        if (GameplayManager.instance.end && !failed)
+        {
+            failText.text = "Won, Go to town!";
         }
     }
 }

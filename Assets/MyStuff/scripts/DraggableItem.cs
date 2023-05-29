@@ -39,9 +39,9 @@ public class DraggableItem : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        targetObject = null;
         if (isDragging && targetLayer == (targetLayer | (1 << other.gameObject.layer)))
         {
+            targetObject = null;
             targetObject = other.gameObject;
         }
     }

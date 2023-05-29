@@ -31,11 +31,11 @@ Transform:
   m_GameObject: {fileID: 1159183832201471174}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -87.34024, y: -90.255844, z: 43.775124}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.9944, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1159183832201471170
 MeshFilter:
@@ -98,7 +98,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.39
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &-8098905188050204424
 Rigidbody:
@@ -130,7 +130,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventory: 0
   maxInv: 5
-  canGo: 0
   agent: {fileID: 4868205743159422016}
   canTransfer: 0
   health: 10
@@ -146,7 +145,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 1159183832201471174}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 0.29
   m_Speed: 7
   m_Acceleration: 100
   avoidancePriority: 50

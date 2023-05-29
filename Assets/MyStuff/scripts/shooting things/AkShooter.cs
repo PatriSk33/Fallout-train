@@ -21,7 +21,7 @@ public class AkShooter : Shooter
 
     public void Update()
     {
-        if(Time.time >= nextFireTime)
+        if(Time.time >= nextFireTime && !GameplayManager.instance.end)
         {
             Shoot(damage, fireRate, bulletSpawnPoint, bulletPrefab);
             nextFireTime = Time.time + fireRate;
@@ -34,7 +34,7 @@ public class AkShooter : Shooter
 
         if (currentHealth <= 0)
         {
-            Death();
+            Death(true, gameObject);
         }
     }
 }

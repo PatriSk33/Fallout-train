@@ -10,20 +10,26 @@ public class LookAt : MonoBehaviour
     private TrainManager train;
     private SpawnerOfEnemies spawner;
 
+    private float startTime;
+
     private void Start()
     {
         train = TrainManager.Instance;
         spawner = SpawnerOfEnemies.Instance;
+        startTime = Time.time + 4;
     }
     private void Update()
     {
-        if (target != null)
+        if (startTime < Time.time)
         {
-            transform.LookAt(target);
-        }
-        else
-        {
-            NewTarget();
+            if (target != null)
+            {
+                transform.LookAt(target);
+            }
+            else
+            {
+                NewTarget();
+            }
         }
     }
 

@@ -9,7 +9,7 @@ public class SpawnerOfEnemies : MonoBehaviour
     public static SpawnerOfEnemies Instance;
     public GameObject nakladacPrefab, spawnPointForNakladac;
     public List<GameObject> spawnPoints, waypoints;
-    public List<GameObject> enemiesToSpawn, enemiesOnField;
+    public List<GameObject> enemiesToSpawn, enemiesOnField, vehicleOnField;
     public bool canSpawn = true;
     int maxEnemiesOnField;
 
@@ -19,33 +19,45 @@ public class SpawnerOfEnemies : MonoBehaviour
         maxEnemiesOnField = waypoints.Count;
 
         //Spawn Nakladac
-        Instantiate(nakladacPrefab, spawnPointForNakladac.transform.position, Quaternion.identity);
+        SpawnNakladac();
     }
+
 
     private void Start()
     {
-        StartCoroutine(SpawnEnemy());
+        SpawnEnemy();
     }
-    IEnumerator SpawnEnemy()
+    public void SpawnEnemy()
+    {
+        StartCoroutine(SpawnEnemyVehicle());
+    }
+
+    IEnumerator SpawnEnemyVehicle()
     {
         while (!TrainManager.Instance.failed)
         {
             yield return new WaitUntil(() => canSpawn == true);
-            GameObject enemyVehicle = Instantiate(enemiesToSpawn[Random.Range(0, enemiesToSpawn.Count - 1)], spawnPoints[Random.Range(0, spawnPoints.Count - 1)].transform.position, Quaternion.identity);
+            GameObject enemyVehicle = Instantiate(enemiesToSpawn[Random.Range(0, enemiesToSpawn.Count)], spawnPoints[Random.Range(0, spawnPoints.Count)].transform.position, Quaternion.identity);
             enemyVehicle.GetComponent<BasicEnemyVehicle>().destination = waypoints[enemiesOnField.Count].transform;
-            
+            vehicleOnField.Add(enemyVehicle);
+
             // Iterate through each child object
             for (int i = 1; i < enemyVehicle.transform.childCount; i++)
             {
                 enemiesOnField.Add(enemyVehicle.transform.GetChild(i).gameObject);
             }
 
-            yield return new WaitForSeconds(0.5f);
-            if(enemiesOnField.Count == maxEnemiesOnField)
+            yield return new WaitForSeconds(1);
+            if(vehicleOnField.Count == maxEnemiesOnField)
             {
                 canSpawn = false;
             }
 
         }
+    }
+
+    public void SpawnNakladac()
+    {
+        Instantiate(nakladacPrefab, spawnPointForNakladac.transform.position, Quaternion.identity);
     }
 }
