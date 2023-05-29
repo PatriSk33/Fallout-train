@@ -3,7 +3,7 @@ using UnityEngine.EventSystems;
 public class DraggableItem : MonoBehaviour
 {
     public LayerMask targetLayer;
-    float distance = 13.5f;
+    float distance = 10f;
     [HideInInspector]public bool isDragging = false;
     GameObject targetObject;
 
@@ -22,7 +22,7 @@ public class DraggableItem : MonoBehaviour
         }
         else
         {
-            transform.position = transform.parent.position + new Vector3(0,1,0);
+            transform.position = transform.parent.position + new Vector3(0,1.7f,0);
         }
     }
 

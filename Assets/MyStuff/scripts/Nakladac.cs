@@ -48,6 +48,7 @@ public class Nakladac : MonoBehaviour
     public void GoBack()
     {
         canTransfer = false;
+        gameObject.GetComponent<BoxCollider>().enabled = false;
         agent.destination = GoAwayPoition.position;
         StopCoroutine("Transfer");
         Destroy(gameObject, 10);
