@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LookAt : MonoBehaviour
 {
-    private Transform target = null;
+    [HideInInspector]public Transform target = null;
     public bool isEnemy;
 
     private TrainManager train;
@@ -22,9 +22,13 @@ public class LookAt : MonoBehaviour
     {
         if (startTime < Time.time)
         {
-            if (target != null)
+            if (target != null && Vector3.Distance(transform.position, target.position) < 19)
             {
                 transform.LookAt(target);
+            }
+            else if (target != null && Vector3.Distance(transform.position, target.position) > 19)
+            {
+                target = null;
             }
             else
             {
@@ -40,10 +44,18 @@ public class LookAt : MonoBehaviour
             if (isEnemy  && train.defensers.Count > 0)
             {
                 target = train.defensers[Random.Range(0, train.defensers.Count)].transform;
+                if(Vector3.Distance(transform.position, target.position) > 18)
+                {
+                    target = null;
+                }
             }
             else if (!isEnemy && spawner.enemiesOnField.Count > 0)
             {
                 target = spawner.enemiesOnField[Random.Range(0, spawner.enemiesOnField.Count)].transform;
+                if (Vector3.Distance(transform.position, target.position) > 18)
+                {
+                    target = null;
+                }
             }
         }
     }

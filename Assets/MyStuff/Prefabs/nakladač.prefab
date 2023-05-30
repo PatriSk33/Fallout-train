@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 1159183832201471171}
   - component: {fileID: -8098905188050204424}
   - component: {fileID: -1779139537275114078}
-  - component: {fileID: 4868205743159422016}
   - component: {fileID: -1713639993651529412}
   m_Layer: 0
   m_Name: "naklada\u010D"
@@ -31,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 1159183832201471174}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -87.34024, y: -90.255844, z: 43.775124}
-  m_LocalScale: {x: 1, y: 1, z: 3}
+  m_LocalScale: {x: 2.5352, y: 1, z: 1.01487}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -101,7 +100,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!114 &-1779139537275114078
 MonoBehaviour:
@@ -117,34 +116,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventory: 0
   maxInv: 5
-  agent: {fileID: 4868205743159422016}
-  canTransfer: 0
-  health: 10
+  canTransfer: 1
   maxHealth: 10
-  GoAwayPoition: {fileID: 2557438017522105235, guid: 380f612770d602e408c6ecdc736d7d3b,
-    type: 3}
---- !u!195 &4868205743159422016
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1159183832201471174}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.29
-  m_Speed: 7
-  m_Acceleration: 100
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 1
-  m_BaseOffset: 0.5
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 1
+  movementSpeed: 8
 --- !u!65 &-1713639993651529412
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -153,7 +127,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1159183832201471174}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}

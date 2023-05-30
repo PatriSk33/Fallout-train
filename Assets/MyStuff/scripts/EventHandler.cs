@@ -19,11 +19,11 @@ public class EventHandler : MonoBehaviour
     {
         switch (index)
         {
-            case 0:  // Slowdown aka spawn new enemy
+            case 0:  // Slowdown the train -- spawn new enemy
                 SpawnerOfEnemies.Instance.SpawnEnemy();
                 break;
-            case 1:  //Speed Up aka delete one enemy vehicle
-                SpawnerOfEnemies.Instance.vehicleOnField[0].GetComponent<BasicEnemyVehicle>().agent.destination = transform.position + new Vector3(0, 0, 30);
+            case 1:  //Speed Up the train -- delete one enemy vehicle
+                SpawnerOfEnemies.Instance.vehicleOnField[0].GetComponent<BasicEnemyVehicle>().Death(false);
                 break;
 
         }

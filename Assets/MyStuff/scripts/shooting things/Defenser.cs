@@ -15,6 +15,8 @@ public class Defenser : Shooter
 
     private DraggableItem dragItem;
 
+    public LookAt lookAt;
+
     private void Start()
     {
         dragItem = GetComponent<DraggableItem>();
@@ -24,7 +26,7 @@ public class Defenser : Shooter
 
     public void Update()
     {
-        if (Time.time >= nextFireTime && !GameplayManager.instance.end)
+        if (Time.time >= nextFireTime && !GameplayManager.instance.end && lookAt.target != null)
         {
             if (SpawnerOfEnemies.Instance.enemiesOnField.Count > 0 && !dragItem.isDragging)
             {

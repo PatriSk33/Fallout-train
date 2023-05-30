@@ -13,6 +13,8 @@ public class RocketShooter : Shooter
     private float nextFireTime;
     [SerializeField]private Transform bulletSpawnPoint;
 
+    public LookAt lookAt;
+
     private void Start()
     {
         currentHealth = maxHealth;
@@ -21,7 +23,7 @@ public class RocketShooter : Shooter
 
     public void Update()
     {
-        if (Time.time >= nextFireTime && !GameplayManager.instance.end)
+        if (Time.time >= nextFireTime && !GameplayManager.instance.end && lookAt.target != null)
         {
             Shoot(damage, fireRate, bulletSpawnPoint, bulletPrefab);
             nextFireTime = Time.time + fireRate;

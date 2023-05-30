@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1033bf7ece7da24ebd8592c1febe6aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 0}
   isEnemy: 0
 --- !u!1 &3664529390256287461
 GameObject:
@@ -165,6 +166,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 4767491486326398790, guid: 8bcf31182a9f40a48af7f2cd5c9e39d8,
     type: 3}
   bulletSpawnPoint: {fileID: 3412981689898338349}
+  lookAt: {fileID: 7692630209939517057}
 --- !u!54 &4994151986200857103
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -196,3 +198,4 @@ MonoBehaviour:
   targetLayer:
     serializedVersion: 2
     m_Bits: 128
+  isDragging: 0

@@ -119,6 +119,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 3796342937348240760, guid: 154dd4465a9ff8140a9acec5eda6ffa9,
     type: 3}
   bulletSpawnPoint: {fileID: 5557456816711610960}
+  lookAt: {fileID: 9187670357451955525}
 --- !u!54 &-4420483433718690370
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -179,4 +180,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1033bf7ece7da24ebd8592c1febe6aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 0}
   isEnemy: 1
