@@ -46,6 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   isEnemy: 1
+  isSniper: 0
 --- !u!1 &3634249789181764128
 GameObject:
   m_ObjectHideFlags: 0
@@ -159,13 +160,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57edd18d96c748343807e8169a5f83ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startShootingTime: 5
   maxHealth: 25
   damage: 1
   fireRate: 0.5
+  maxAmmo: 20
   bulletPrefab: {fileID: 4767491486326398790, guid: 8bcf31182a9f40a48af7f2cd5c9e39d8,
     type: 3}
   bulletSpawnPoint: {fileID: 7717606531374505822}
   lookAt: {fileID: 4872011553845911160}
+  reloadTime: 2
 --- !u!54 &520794017477940839
 Rigidbody:
   m_ObjectHideFlags: 0

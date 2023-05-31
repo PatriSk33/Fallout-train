@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Defenser : Shooter
+public class AttackerShoot : Shooter
 {
     public float startShootingTime;
 
@@ -12,12 +12,10 @@ public class Defenser : Shooter
     public float damage, fireRate;
     public int maxAmmo;
     private int currentAmmo;
+
     public GameObject bulletPrefab;
-
+    [SerializeField] private Transform bulletSpawnPoint;
     private float nextFireTime;
-    [SerializeField]private Transform bulletSpawnPoint;
-
-    private DraggableItem dragItem;
 
     public LookAt lookAt;
 
@@ -26,8 +24,8 @@ public class Defenser : Shooter
 
     private void Start()
     {
-        dragItem = GetComponent<DraggableItem>();
         currentHealth = maxHealth;
+        currentAmmo = maxAmmo;
         nextFireTime = Time.time + startShootingTime;
     }
 
@@ -35,18 +33,16 @@ public class Defenser : Shooter
     {
         if (Time.time >= nextFireTime && !GameplayManager.instance.end && lookAt.target != null)
         {
-            if (SpawnerOfEnemies.Instance.enemiesOnField.Count > 0 && !dragItem.isDragging)
+            if (currentAmmo > 0)
             {
-                if (currentAmmo > 0)
-                {
-                    Shoot(damage, fireRate, bulletSpawnPoint, bulletPrefab);
-                    currentAmmo--;
-                }
-                else if (!isReloading)
-                {
-                    StartCoroutine(Reload());
-                }
+                Shoot(damage, fireRate, bulletSpawnPoint, bulletPrefab);
+                currentAmmo--;
             }
+            else if (!isReloading)
+            {
+                StartCoroutine(Reload());
+            }
+
             nextFireTime = Time.time + fireRate;
         }
     }
@@ -65,7 +61,7 @@ public class Defenser : Shooter
 
         if (currentHealth <= 0)
         {
-            Death(false, gameObject);
+            Death(true, gameObject);
         }
     }
 }

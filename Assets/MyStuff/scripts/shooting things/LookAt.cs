@@ -6,6 +6,7 @@ public class LookAt : MonoBehaviour
 {
     [HideInInspector]public Transform target = null;
     public bool isEnemy;
+    public bool isSniper;
 
     private TrainManager train;
     private SpawnerOfEnemies spawner;
@@ -22,17 +23,31 @@ public class LookAt : MonoBehaviour
     {
         if (startTime < Time.time)
         {
-            if (target != null && Vector3.Distance(transform.position, target.position) < 19)
+            if (!isSniper)
             {
-                transform.LookAt(target);
-            }
-            else if (target != null && Vector3.Distance(transform.position, target.position) > 19)
-            {
-                target = null;
+                if (target != null && Vector3.Distance(transform.position, target.position) < 19)
+                {
+                    transform.LookAt(target);
+                }
+                else if (target != null && Vector3.Distance(transform.position, target.position) > 19)
+                {
+                    target = null;
+                }
+                else
+                {
+                    NewTarget();
+                }
             }
             else
             {
-                NewTarget();
+                if (target != null)
+                {
+                    transform.LookAt(target);
+                }
+                else
+                {
+                    NewTarget();
+                }
             }
         }
     }
@@ -41,7 +56,7 @@ public class LookAt : MonoBehaviour
     {
         if (target == null)
         {
-            if (isEnemy  && train.defensers.Count > 0)
+            if (isEnemy && train.defensers.Count > 0)
             {
                 target = train.defensers[Random.Range(0, train.defensers.Count)].transform;
                 if(Vector3.Distance(transform.position, target.position) > 18)
@@ -51,10 +66,17 @@ public class LookAt : MonoBehaviour
             }
             else if (!isEnemy && spawner.enemiesOnField.Count > 0)
             {
-                target = spawner.enemiesOnField[Random.Range(0, spawner.enemiesOnField.Count)].transform;
-                if (Vector3.Distance(transform.position, target.position) > 18)
+                if (!isSniper)
                 {
-                    target = null;
+                    target = spawner.enemiesOnField[Random.Range(0, spawner.enemiesOnField.Count)].transform;
+                    if (Vector3.Distance(transform.position, target.position) > 18)
+                    {
+                        target = null;
+                    }
+                }
+                else
+                {
+                    target = spawner.driversOnField[Random.Range(0, spawner.driversOnField.Count)].transform;
                 }
             }
         }

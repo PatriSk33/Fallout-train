@@ -19,20 +19,14 @@ public class BasicEnemyVehicle : MonoBehaviour
     private float health;
     public float maxHealth;
 
-    // Attackers on the vehicle
-    public List<GameObject> enemiesOnVehicle;
+    // Driver
+    public bool driver = true;
 
     private void Awake()
     {
         // Set stats
         health = maxHealth;
         startPosition = transform.position;
-
-        // Put all attackers into the list of people on vehicle
-        for (int i = 1; i < transform.childCount; i++)
-        {
-            enemiesOnVehicle.Add(transform.GetChild(i).gameObject);
-        }
     }
 
     public void Update()
@@ -48,7 +42,6 @@ public class BasicEnemyVehicle : MonoBehaviour
             //Activate an Animation when the car moves back and forth
         }
 
-
         // Death because of vehice not having health
         if (health <= 0)
         {
@@ -56,7 +49,11 @@ public class BasicEnemyVehicle : MonoBehaviour
         }
 
         // Death because there is no one to drive the vehicle
-        if(enemiesOnVehicle.Count == 0)
+        if(!transform.GetChild(1).CompareTag("Driver"))
+        {
+            driver = false;
+        }
+        if(!driver)
         {
             Death(false);
         }

@@ -46,20 +46,14 @@ public class BulletScript : MonoBehaviour
 
         if (other.CompareTag("Attacker"))
         {
+            other.GetComponent<AttackerShoot>().TakeDamage(damage);
+            gameObject.SetActive(false);
+        }
 
-            AkShooter akShooter = other.GetComponent<AkShooter>();
-            if (akShooter != null)
-            {
-                // AKShooter script is attached to the attacker object
-                akShooter.TakeDamage(damage);
-            }
-
-            RocketShooter rocketShooter = other.GetComponent<RocketShooter>();
-            if (rocketShooter != null)
-            {
-                // RocketShooter script is attached to the attacker object
-                rocketShooter.TakeDamage(damage);
-            }
+        if (other.CompareTag("Driver"))
+        {
+            SpawnerOfEnemies.Instance.driversOnField.Remove(other.gameObject);
+            Destroy(other.gameObject);
             gameObject.SetActive(false);
         }
     }

@@ -9,6 +9,21 @@ EditorBuildSettings:
     path: Assets/Scenes/Gameplay.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
-    path: Assets/Scenes/Town.unity
+    path: Assets/Scenes/Black Springs - rafinery.unity
     guid: 3a5203dd4e1b41347b233689b5278ace
+  - enabled: 1
+    path: Assets/Scenes/Hard Dust - cementaren.unity
+    guid: 1cfb5293b47e6e545ac2575ee29e9d17
+  - enabled: 1
+    path: Assets/Scenes/Junky Town - srotovisko.unity
+    guid: 4d6a2b5cd5427a0429c978b5cd4478c8
+  - enabled: 1
+    path: Assets/Scenes/New Alamo - guns.unity
+    guid: 1b58c0cc052cd484a85bec1986385d6a
+  - enabled: 1
+    path: Assets/Scenes/Oasis 17 - skleniky.unity
+    guid: 2c40a4071161f3949bf9c20fc7dd6a8c
+  - enabled: 1
+    path: Assets/Scenes/Power Dam - Battery.unity
+    guid: 0a1bf48dfd052914ca2d1d424e65eb76
   m_configObjects: {}

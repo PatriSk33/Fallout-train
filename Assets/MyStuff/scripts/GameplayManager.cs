@@ -12,6 +12,11 @@ public class GameplayManager : MonoBehaviour
     public Button continueToTown;
     public Text continueToTownText;
 
+
+    public int goingToIndex, fromIndex; // Scene indexes
+
+    private float TimeInGame = 300;  //Max amount 5 - SpeedOfTrain ( -amount of vagons(how many and how much is in them) + power of motor + skill of train driver )
+
     private void Awake()
     {
         instance = this;
@@ -19,7 +24,7 @@ public class GameplayManager : MonoBehaviour
 
     private void Start()
     {
-        endTime = Time.time + 180;
+        endTime = Time.time + TimeInGame;
     }
     void Update()
     {
@@ -36,6 +41,6 @@ public class GameplayManager : MonoBehaviour
 
     public void ContinueToTown()
     {
-        SceneManager.LoadScene("Town");
+        SceneManager.LoadScene(goingToIndex);
     }
 }

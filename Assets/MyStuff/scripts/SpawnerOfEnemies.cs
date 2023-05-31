@@ -15,7 +15,7 @@ public class SpawnerOfEnemies : MonoBehaviour
     public GameObject nakladacPrefab, spawnPointForNakladac;
     public List<GameObject> spawnPoints;
     public List<WaypointList> allWaypoints;
-    public List<GameObject> enemiesToSpawn, enemiesOnField, vehicleOnField;
+    public List<GameObject> enemiesToSpawn, enemiesOnField, vehicleOnField, driversOnField;
     public bool canSpawn = true;
     int maxEnemiesOnField;
 
@@ -77,7 +77,14 @@ public class SpawnerOfEnemies : MonoBehaviour
             // Get all attackers from the vehicle into the list of all attackers
             for (int i = 1; i < enemyVehicle.transform.childCount; i++)
             {
-                enemiesOnField.Add(enemyVehicle.transform.GetChild(i).gameObject);
+                if (i == 1)
+                {
+                    driversOnField.Add(enemyVehicle.transform.GetChild(i).gameObject);
+                }
+                else
+                {
+                    enemiesOnField.Add(enemyVehicle.transform.GetChild(i).gameObject);
+                }
             }
 
             yield return new WaitForSeconds(1);

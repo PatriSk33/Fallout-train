@@ -46,6 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   isEnemy: 0
+  isSniper: 0
 --- !u!1 &3664529390256287461
 GameObject:
   m_ObjectHideFlags: 0
@@ -62,7 +63,7 @@ GameObject:
   - component: {fileID: 4994151986200857103}
   - component: {fileID: 5316126685379530777}
   m_Layer: 0
-  m_Name: Defenser
+  m_Name: Defenser simple
   m_TagString: Defenser
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -160,13 +161,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff9bf5cce18da1546b389e248e869e2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startShootingTime: 3
   maxHealth: 100
   damage: 1
   fireRate: 0.5
+  maxAmmo: 30
   bulletPrefab: {fileID: 4767491486326398790, guid: 8bcf31182a9f40a48af7f2cd5c9e39d8,
     type: 3}
   bulletSpawnPoint: {fileID: 3412981689898338349}
   lookAt: {fileID: 7692630209939517057}
+  reloadTime: 2
 --- !u!54 &4994151986200857103
 Rigidbody:
   m_ObjectHideFlags: 0

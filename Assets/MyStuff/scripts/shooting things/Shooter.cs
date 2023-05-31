@@ -11,7 +11,6 @@ public class Shooter : MonoBehaviour
 
         if (isEnemy)
         {
-            transform.parent.GetComponent<BasicEnemyVehicle>().enemiesOnVehicle.Remove(o);
             SpawnerOfEnemies.Instance.enemiesOnField.Remove(o);
         }
         else
@@ -24,11 +23,11 @@ public class Shooter : MonoBehaviour
     public void Shoot(float damage, float fireRate, Transform t, GameObject bulletPrefab)
     {
         GameObject bullet = BulletPool.Instance.GetBullet(bulletPrefab);
-        bullet.transform.position = t.position;
-        bullet.transform.rotation = t.rotation;
+        bullet.transform.position = t.position;     //Hlaven zbrane
+        bullet.transform.rotation = t.rotation;     //Hlaven zbrane
 
         BulletScript bulletScript = bullet.GetComponent<BulletScript>();
         bulletScript.SetDamage(damage);
-        bulletScript.Fire();
+        bulletScript.Fire();  //Aditionla effects
     }
 }
