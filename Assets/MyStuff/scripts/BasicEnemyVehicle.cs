@@ -49,9 +49,11 @@ public class BasicEnemyVehicle : MonoBehaviour
         }
 
         // Death because there is no one to drive the vehicle
-        if(!transform.GetChild(1).CompareTag("Driver"))
+        if(transform.GetChild(1) != null)
         {
-            driver = false;
+            if (!transform.GetChild(1).CompareTag("Driver")) { 
+                driver = false;
+            }
         }
         if(!driver)
         {
@@ -93,8 +95,8 @@ public class BasicEnemyVehicle : MonoBehaviour
         if (other.CompareTag("Vehicle"))
         {
             //Bum Bum = explosion of both vehicles
-            Death(true);
             other.GetComponent<BasicEnemyVehicle>().Death(true);
+            Death(true);
         }
     }
 }

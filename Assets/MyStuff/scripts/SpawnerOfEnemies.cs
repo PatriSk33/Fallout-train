@@ -55,7 +55,7 @@ public class SpawnerOfEnemies : MonoBehaviour
             yield return new WaitUntil(() => canSpawn == true);
 
             int spawnpointIndex = Random.Range(0, spawnPoints.Count);
-            GameObject enemyVehicle = Instantiate(enemiesToSpawn[Random.Range(0, enemiesToSpawn.Count)], spawnPoints[spawnpointIndex].transform.position, Quaternion.identity);
+            GameObject enemyVehicle = Instantiate(enemiesToSpawn[Random.Range(0, enemiesToSpawn.Count)], spawnPoints[spawnpointIndex].transform.position - new Vector3(0,1.12f,0), Quaternion.identity);
 
             // Get the random destination waypoint from the line it spawns in
             Transform randomWaypoint = GetRandomUnusedWaypoint(spawnpointIndex);
@@ -94,7 +94,7 @@ public class SpawnerOfEnemies : MonoBehaviour
             }
         }
     }
-
+    
     public void RemoveVehicle(GameObject vehicle)
     {
         int spawnpointIndex = vehicle.GetComponent<BasicEnemyVehicle>().spawnpointIndex;
@@ -108,6 +108,8 @@ public class SpawnerOfEnemies : MonoBehaviour
         {
             enemiesOnField.Remove(vehicle.transform.GetChild(i).gameObject);
         }
+
+        vehicleOnField.Remove(vehicle);
 
         if (vehicleOnField.Count == 0)
         {
@@ -178,6 +180,6 @@ public class SpawnerOfEnemies : MonoBehaviour
 
     public void SpawnNakladac()
     {
-        Instantiate(nakladacPrefab, spawnPointForNakladac.transform.position, Quaternion.identity);
+        Instantiate(nakladacPrefab, spawnPointForNakladac.transform.position - new Vector3(0, 1.12f, 0), Quaternion.identity);
     }
 }

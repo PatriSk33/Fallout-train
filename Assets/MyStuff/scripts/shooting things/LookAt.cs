@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class LookAt : MonoBehaviour
@@ -12,6 +13,8 @@ public class LookAt : MonoBehaviour
     private SpawnerOfEnemies spawner;
 
     private float startTime;
+    public float minRange = 0;  // Minimum range for selecting the target
+    public float maxRange = 18; // Maximum range for selecting the target
 
     private void Start()
     {
@@ -25,11 +28,11 @@ public class LookAt : MonoBehaviour
         {
             if (!isSniper)
             {
-                if (target != null && Vector3.Distance(transform.position, target.position) < 19)
+                if (target != null && Vector3.Distance(transform.position, target.position) < maxRange + 1)
                 {
                     transform.LookAt(target);
                 }
-                else if (target != null && Vector3.Distance(transform.position, target.position) > 19)
+                else if (target != null && Vector3.Distance(transform.position, target.position) > maxRange + 1)
                 {
                     target = null;
                 }
@@ -59,7 +62,7 @@ public class LookAt : MonoBehaviour
             if (isEnemy && train.defensers.Count > 0)
             {
                 target = train.defensers[Random.Range(0, train.defensers.Count)].transform;
-                if(Vector3.Distance(transform.position, target.position) > 18)
+                if(Vector3.Distance(transform.position, target.position) > maxRange)
                 {
                     target = null;
                 }
@@ -68,8 +71,18 @@ public class LookAt : MonoBehaviour
             {
                 if (!isSniper)
                 {
-                    target = spawner.enemiesOnField[Random.Range(0, spawner.enemiesOnField.Count)].transform;
-                    if (Vector3.Distance(transform.position, target.position) > 18)
+                    // Filter the enemies within the specified range
+                    List<Transform> enemiesInRange = spawner.enemiesOnField
+                        .Where(enemy => Vector3.Distance(transform.position, enemy.transform.position) >= minRange && Vector3.Distance(transform.position, enemy.transform.position) <= maxRange)
+                        .Select(enemy => enemy.transform)
+                        .ToList();
+
+                    if (enemiesInRange.Count > 0)
+                    {
+                        int randomIndex = Random.Range(0, enemiesInRange.Count);
+                        target = enemiesInRange[randomIndex];
+                    }
+                    else
                     {
                         target = null;
                     }

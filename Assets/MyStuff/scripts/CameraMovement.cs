@@ -1,30 +1,59 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Net.Sockets;
 using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
-    public float moveSpeed = 15f;
-    private float leftBarier;
+    private float leftBarrier;
+    private float rightBarrier = 10f;
+    private float x = 10;
+    private int currentVagon;
+    private int vagonsCount;
 
     private void Start()
     {
-        leftBarier = (13.75f * TrainManager.Instance.vagonsToAttack.Count) + 10;
+        vagonsCount = TrainManager.Instance.vagonsToAttack.Count;
+        leftBarrier = (18f * (vagonsCount - 1)) + 10;
     }
 
     private void Update()
     {
-        float moveX = Input.GetAxis("Horizontal");
-        Vector3 movement = new Vector3(moveX * moveSpeed * Time.deltaTime, 0f, 0f);
-        transform.Translate(movement);
-
-        if (transform.position.x < 10)
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            transform.position = new Vector3(10,transform.position.y, transform.position.z);
+            MoveLeft();
         }
-        else if(transform.position.x > leftBarier)
+        else if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-            transform.position = new Vector3(leftBarier, transform.position.y, transform.position.z);
+            MoveRight();
+        }
+        transform.position = Vector3.MoveTowards(transform.position, new Vector3(x, transform.position.y, transform.position.z), Time.deltaTime * 100);
+    }
+
+    public void MoveLeft()
+    {
+        if (x == leftBarrier)
+        {
+            currentVagon = 0;
+            x = rightBarrier;
+        }
+        else if (currentVagon != vagonsCount)
+        {
+            x += 18f;
+            currentVagon++;
+        }
+    }
+    public void MoveRight()
+    {
+        if (x == rightBarrier)
+        {
+            currentVagon = vagonsCount;
+            x = leftBarrier;
+        }
+        else if (currentVagon != 0)
+        {
+            currentVagon--;
+            x -= 18f;
         }
     }
 }

@@ -2472,14 +2472,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1823952851}
-  m_LocalRotation: {x: -0, y: -0.7043859, z: -0, w: 0.70981735}
-  m_LocalPosition: {x: 100, y: 0.19, z: 4}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 100, y: 0, z: 4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1001 &1846884438
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2708,6 +2708,7 @@ MonoBehaviour:
     - {fileID: 1249522213}
   enemiesToSpawn:
   - {fileID: 234091537567973185, guid: 78e0b1c4a33c2f24a9886e5cf8a6b4cf, type: 3}
+  - {fileID: 234091537567973185, guid: db53e1486aff2484984cb285163d9189, type: 3}
   enemiesOnField: []
   vehicleOnField: []
   driversOnField: []
@@ -3046,7 +3047,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3bde16c262e81547acbb582d405db31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
 --- !u!1 &2108163049
 GameObject:
   m_ObjectHideFlags: 0
