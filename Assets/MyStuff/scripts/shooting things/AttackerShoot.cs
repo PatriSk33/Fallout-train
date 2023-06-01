@@ -9,18 +9,20 @@ public class AttackerShoot : Shooter
     public int maxHealth = 100;
     private float currentHealth;
 
+    [Range(0, 1)] public float criticalChange;
+    public float criticalMultiplier;
     public float damage, fireRate;
     public int maxAmmo;
     private int currentAmmo;
+
+    private bool isReloading;
+    public float reloadTime;
 
     public GameObject bulletPrefab;
     [SerializeField] private Transform bulletSpawnPoint;
     private float nextFireTime;
 
     public LookAt lookAt;
-
-    private bool isReloading;
-    public float reloadTime;
 
     private void Start()
     {
@@ -35,7 +37,7 @@ public class AttackerShoot : Shooter
         {
             if (currentAmmo > 0)
             {
-                Shoot(damage, fireRate, bulletSpawnPoint, bulletPrefab);
+                Shoot(damage, fireRate, bulletSpawnPoint, bulletPrefab, criticalChange, criticalMultiplier);
                 currentAmmo--;
             }
             else if (!isReloading)

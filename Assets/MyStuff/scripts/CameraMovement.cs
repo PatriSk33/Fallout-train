@@ -11,6 +11,8 @@ public class CameraMovement : MonoBehaviour
     private int currentVagon;
     private int vagonsCount;
 
+    public float jumpSpeed = 100;
+
     private void Start()
     {
         vagonsCount = TrainManager.Instance.vagonsToAttack.Count;
@@ -27,7 +29,7 @@ public class CameraMovement : MonoBehaviour
         {
             MoveRight();
         }
-        transform.position = Vector3.MoveTowards(transform.position, new Vector3(x, transform.position.y, transform.position.z), Time.deltaTime * 100);
+        transform.position = Vector3.MoveTowards(transform.position, new Vector3(x, transform.position.y, transform.position.z), Time.deltaTime * jumpSpeed);
     }
 
     public void MoveLeft()

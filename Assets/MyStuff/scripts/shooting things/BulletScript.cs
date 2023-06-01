@@ -1,15 +1,27 @@
 using UnityEngine;
 
 public class BulletScript : MonoBehaviour
-{
-    private float damage;
-    [SerializeField]private float speed = 10f;
+{   
+    //Start Position
     private float pociatok;
-    [SerializeField] private float killTime;
+    private Vector3 startPos;
+
+    //Stats
+    private float damage;
+
+    [Header("Basic Stats")]
+    [SerializeField] private float speed = 10f;
+    [SerializeField] private float flyTime;
+
+    [Header("Sniper Bullet Stats")]
+    public bool isSniperBullet;
+    [Tooltip("For Sniper bullet")]public float longDistance, closeDistance;
+    [Tooltip("Damage for each sniper distance")]public float longDistanceDamage, mediumDistanceDamage, closeDistanceDamage;
 
     private void OnEnable()
     {
-        pociatok = Time.time + killTime;
+        pociatok = Time.time + flyTime;
+        startPos = transform.position;
     }
     private void Update()
     {
@@ -50,11 +62,25 @@ public class BulletScript : MonoBehaviour
             gameObject.SetActive(false);
         }
 
-        if (other.CompareTag("Driver"))
+        if (isSniperBullet)
         {
-            SpawnerOfEnemies.Instance.driversOnField.Remove(other.gameObject);
-            Destroy(other.gameObject);
-            gameObject.SetActive(false);
+            if (other.CompareTag("Driver"))
+            {
+                SpawnerOfEnemies.Instance.driversOnField.Remove(other.gameObject);
+                if (Vector3.Distance(startPos, other.transform.position) > longDistance)
+                {
+                    other.GetComponent<AttackerShoot>().TakeDamage(longDistanceDamage);
+                }
+                else if (Vector3.Distance(startPos, other.transform.position) > closeDistance)
+                {
+                    other.GetComponent<AttackerShoot>().TakeDamage(mediumDistanceDamage);
+                }
+                else if (Vector3.Distance(startPos, other.transform.position) < closeDistance)
+                {
+                    other.GetComponent<AttackerShoot>().TakeDamage(closeDistanceDamage);
+                }
+                gameObject.SetActive(false);
+            }
         }
     }
 }

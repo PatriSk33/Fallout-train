@@ -89,7 +89,24 @@ public class LookAt : MonoBehaviour
                 }
                 else
                 {
-                    target = spawner.driversOnField[Random.Range(0, spawner.driversOnField.Count)].transform;
+                    if (spawner.driversOnField.Count > 0)
+                    {
+                        float maxDistance = float.MinValue; // Initialize the maximum distance as the lowest possible value
+                        Transform furthestEnemy = null; // Initialize the furthest enemy as null
+
+                        foreach (var driver in spawner.driversOnField)
+                        {
+                            float distance = Vector3.Distance(driver.transform.position, transform.position);
+
+                            if (distance > maxDistance)
+                            {
+                                maxDistance = distance;
+                                furthestEnemy = driver.transform;
+                            }
+                        }
+
+                        target = furthestEnemy;
+                    }
                 }
             }
         }
