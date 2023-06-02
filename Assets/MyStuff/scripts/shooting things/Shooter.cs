@@ -32,7 +32,7 @@ public class Shooter : MonoBehaviour
         float randomValue = Random.value; // Generate a random number between 0 and 1
         if (randomValue <= criticalChange)
         {
-            bulletScript.SetDamage(damage * criticalMultiplier);
+            bulletScript.SetDamage(damage + (damage * criticalMultiplier));
         }
         else
         {

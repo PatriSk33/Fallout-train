@@ -6,13 +6,15 @@ using UnityEngine;
 public class LookAt : MonoBehaviour
 {
     [HideInInspector]public Transform target = null;
-    public bool isEnemy;
+    [Header("Sniper")]
     public bool isSniper;
 
     private TrainManager train;
     private SpawnerOfEnemies spawner;
 
     private float startTime;
+    [Header("Basic Enemy")]
+    public bool isEnemy;
     public float minRange = 0;  // Minimum range for selecting the target
     public float maxRange = 18; // Maximum range for selecting the target
 

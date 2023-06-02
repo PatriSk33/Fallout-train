@@ -115,7 +115,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 15
-  killTime: 3
+  flyTime: 5
+  isSniperBullet: 0
+  longDistance: 0
+  closeDistance: 0
+  longDistanceDamage: 0
+  mediumDistanceDamage: 0
+  closeDistanceDamage: 0
 --- !u!54 &-6038042828126231862
 Rigidbody:
   m_ObjectHideFlags: 0

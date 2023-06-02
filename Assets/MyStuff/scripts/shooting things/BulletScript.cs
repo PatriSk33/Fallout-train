@@ -11,7 +11,7 @@ public class BulletScript : MonoBehaviour
 
     [Header("Basic Stats")]
     [SerializeField] private float speed = 10f;
-    [SerializeField] private float flyTime;
+    [SerializeField][Tooltip("Time after which the bullet deseaper")] private float flyTime = 3;
 
     [Header("Sniper Bullet Stats")]
     public bool isSniperBullet;
@@ -66,18 +66,17 @@ public class BulletScript : MonoBehaviour
         {
             if (other.CompareTag("Driver"))
             {
-                SpawnerOfEnemies.Instance.driversOnField.Remove(other.gameObject);
                 if (Vector3.Distance(startPos, other.transform.position) > longDistance)
                 {
-                    other.GetComponent<AttackerShoot>().TakeDamage(longDistanceDamage);
+                    other.GetComponent<Driver>().TakeDamage(longDistanceDamage);
                 }
                 else if (Vector3.Distance(startPos, other.transform.position) > closeDistance)
                 {
-                    other.GetComponent<AttackerShoot>().TakeDamage(mediumDistanceDamage);
+                    other.GetComponent<Driver>().TakeDamage(mediumDistanceDamage);
                 }
                 else if (Vector3.Distance(startPos, other.transform.position) < closeDistance)
                 {
-                    other.GetComponent<AttackerShoot>().TakeDamage(closeDistanceDamage);
+                    other.GetComponent<Driver>().TakeDamage(closeDistanceDamage);
                 }
                 gameObject.SetActive(false);
             }
