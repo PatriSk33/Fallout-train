@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Hard Dust - cementaren.unity
     guid: 1cfb5293b47e6e545ac2575ee29e9d17
   - enabled: 1
-    path: Assets/Scenes/Junky Town - srotovisko.unity
+    path: Assets/Scenes/JunkyTown/Junky Town - srotovisko.unity
     guid: 4d6a2b5cd5427a0429c978b5cd4478c8
   - enabled: 1
     path: Assets/Scenes/New Alamo - guns.unity
