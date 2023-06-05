@@ -7,11 +7,12 @@ public class BulletScript : MonoBehaviour
     private Vector3 startPos;
 
     //Stats
-    private float damage;
+    [HideInInspector]public float damage;
 
     [Header("Basic Stats")]
     [SerializeField] private float speed = 10f;
     [SerializeField][Tooltip("Time after which the bullet deseaper")] private float flyTime = 3;
+    public bool isEnemyBullet;
 
     [Header("Sniper Bullet Stats")]
     public bool isSniperBullet;

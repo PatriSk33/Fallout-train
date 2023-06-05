@@ -20,6 +20,7 @@ public class EventHandler : MonoBehaviour
         switch (index)
         {
             case 0:  // Slowdown the train -- spawn new enemy
+                SpawnerOfEnemies.Instance.canSpawn = true;
                 SpawnerOfEnemies.Instance.SpawnEnemy();
                 break;
             case 1:  //Speed Up the train -- delete one enemy vehicle

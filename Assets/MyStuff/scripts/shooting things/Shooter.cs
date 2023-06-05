@@ -12,6 +12,7 @@ public class Shooter : MonoBehaviour
         if (isEnemy)
         {
             SpawnerOfEnemies.Instance.enemiesOnField.Remove(o);
+            transform.parent.GetComponent<BasicEnemyVehicle>().enemiesOnVehicle--;
         }
         else
         {

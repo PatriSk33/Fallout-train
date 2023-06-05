@@ -84,6 +84,7 @@ public class SpawnerOfEnemies : MonoBehaviour
                 else
                 {
                     enemiesOnField.Add(enemyVehicle.transform.GetChild(i).gameObject);
+                    enemyVehicle.GetComponent<BasicEnemyVehicle>().enemiesOnVehicle++;
                 }
             }
 
@@ -117,6 +118,7 @@ public class SpawnerOfEnemies : MonoBehaviour
         }
     }
 
+    #region Getting Waypoint
     void ReleaseWaypoint(int spawnpointIndex, Transform waypoint)
     {
         usedWaypoints[spawnpointIndex].Remove(waypoint);
@@ -176,7 +178,7 @@ public class SpawnerOfEnemies : MonoBehaviour
         return null;
     }
 
-
+    #endregion
 
     public void SpawnNakladac()
     {

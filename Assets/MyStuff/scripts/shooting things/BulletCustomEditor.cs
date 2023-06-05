@@ -6,6 +6,7 @@ using UnityEngine;
 [CustomEditor(typeof(BulletScript))]
 public class BulletCustomEditor : Editor
 {
+    private SerializedProperty isEnemyBullet;
     private SerializedProperty speed;
     private SerializedProperty flyTime;
 
@@ -18,6 +19,7 @@ public class BulletCustomEditor : Editor
 
     private void OnEnable()
     {
+        isEnemyBullet = serializedObject.FindProperty("isEnemyBullet");
         speed = serializedObject.FindProperty("speed");
         flyTime = serializedObject.FindProperty("flyTime");
 
@@ -34,6 +36,7 @@ public class BulletCustomEditor : Editor
         serializedObject.Update();
 
         EditorGUILayout.LabelField("Basic Stats", EditorStyles.boldLabel);
+        EditorGUILayout.PropertyField(isEnemyBullet);
         EditorGUILayout.PropertyField(speed);
         EditorGUILayout.PropertyField(flyTime);
         

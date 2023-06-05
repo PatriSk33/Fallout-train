@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5899454978537150369}
   m_Layer: 0
   m_Name: Sniper bullet
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -112,8 +112,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 059d185778718304f87aafb65b6c8228, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 0
   speed: 40
   flyTime: 3
+  isEnemyBullet: 0
   isSniperBullet: 1
   longDistance: 40
   closeDistance: 18
