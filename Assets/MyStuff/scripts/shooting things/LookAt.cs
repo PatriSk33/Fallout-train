@@ -93,21 +93,20 @@ public class LookAt : MonoBehaviour
                 {
                     if (spawner.driversOnField.Count > 0)
                     {
-                        float maxDistance = float.MinValue; // Initialize the maximum distance as the lowest possible value
-                        Transform furthestEnemy = null; // Initialize the furthest enemy as null
+                        // Filter the enemies within the specified range
+                        List<Transform> driversInRange = spawner.driversOnField
+                            .OrderByDescending(enemy => Vector3.Distance(transform.position, enemy.transform.position))
+                            .Select(enemy => enemy.transform)
+                            .ToList();
 
-                        foreach (var driver in spawner.driversOnField)
+                        if (driversInRange.Count > 0)
                         {
-                            float distance = Vector3.Distance(driver.transform.position, transform.position);
-
-                            if (distance > maxDistance)
-                            {
-                                maxDistance = distance;
-                                furthestEnemy = driver.transform;
-                            }
+                            target = driversInRange[0];
                         }
-
-                        target = furthestEnemy;
+                        else
+                        {
+                            target = null;
+                        }
                     }
                 }
             }

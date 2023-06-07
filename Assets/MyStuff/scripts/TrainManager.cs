@@ -17,6 +17,9 @@ public class TrainManager : MonoBehaviour
     //Defensers
     public List<GameObject> defensers;
 
+    //Stats
+    public float speed;
+
     private void Awake()
     {
        Instance = this;

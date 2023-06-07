@@ -15,8 +15,10 @@ public class SpawnerOfEnemies : MonoBehaviour
     public GameObject nakladacPrefab, spawnPointForNakladac;
     public List<GameObject> spawnPoints;
     public List<WaypointList> allWaypoints;
-    public List<GameObject> enemiesToSpawn, enemiesOnField, vehicleOnField, driversOnField;
-    public bool canSpawn = true;
+    public List<GameObject> enemiesToSpawn;
+
+    [HideInInspector] public List<GameObject> enemiesOnField, vehicleOnField, driversOnField;
+    [HideInInspector] public bool canSpawn = true;
     int maxEnemiesOnField;
 
     // Keep track of used waypoints for each spawn point

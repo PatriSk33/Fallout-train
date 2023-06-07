@@ -48,8 +48,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5.246388, y: 0.8524478, z: 2.4239545}
-  m_Center: {x: -1.5251229, y: 1.1439477, z: -0.76711273}
+  m_Size: {x: 8, y: 0.85244775, z: 2.4239545}
+  m_Center: {x: -3.18, y: 1.1439477, z: -0.76711273}
 --- !u!54 &6899861706174303055
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -81,9 +81,14 @@ MonoBehaviour:
   indexOfLine: 0
   destination: {fileID: 0}
   movementSpeed: 8
+  turnSpeed: 30
   spawnpointIndex: 0
   maxHealth: 20
   driver: 1
+  enemiesOnVehicle: 0
+  changeOfDodging: 0.568
+  dodgeDistance: 3
+  dodgeDuration: 1.2
 --- !u!1 &3719271586567096014
 GameObject:
   m_ObjectHideFlags: 0

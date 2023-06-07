@@ -2,9 +2,14 @@ using UnityEngine;
 
 public class MoveLeft : MonoBehaviour
 {
-    public float speed = 28;
+    [HideInInspector]public float speed;
     [SerializeField]private TrainManager playerCS;
     public Vector3 smer;
+
+    private void Start()
+    {
+        speed = TrainManager.Instance.speed;
+    }
     void Update()
     {
         if (playerCS.failed == false)
@@ -12,10 +17,10 @@ public class MoveLeft : MonoBehaviour
             transform.Translate(smer * Time.deltaTime * speed);
         }
 
-        /*if (transform.position.x < -10 && gameObject.CompareTag("Obstacle"))
+        if (transform.position.x > 100 && gameObject.CompareTag("Obstacle"))
         {
             Destroy(gameObject);
-        }*/
+        }
 
         /*if (Input.GetKey(KeyCode.LeftShift))
         {

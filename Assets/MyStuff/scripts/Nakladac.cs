@@ -16,7 +16,8 @@ public class Nakladac : MonoBehaviour
 
     // Movement
     private Vector3 positionOfWagon;
-    public float movementSpeed;
+    [HideInInspector] public float movementSpeed;
+
     // Going Back
     private Vector3 GoAwayPoition;
     private bool canGoBack;
@@ -32,6 +33,7 @@ public class Nakladac : MonoBehaviour
         //Get the position of Wagon to attack
         index = Random.Range(0, TrainManager.Instance.vagonsToAttack.Count);
         positionOfWagon = TrainManager.Instance.vagonsToAttack[index].transform.position;
+        movementSpeed = TrainManager.Instance.speed + 1;
     }
 
     private void Update()

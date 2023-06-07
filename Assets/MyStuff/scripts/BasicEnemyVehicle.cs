@@ -6,9 +6,9 @@ public class BasicEnemyVehicle : MonoBehaviour
 {
     // Movement
     [Header("Basic Stats")]
-    [HideInInspector]public int indexOfLine;
+    [HideInInspector] public int indexOfLine;
     public Transform destination;
-    public float movementSpeed;
+    [HideInInspector] public float movementSpeed;
     public float turnSpeed = 30f;
     private bool gettingToPosition = true;
 
@@ -41,6 +41,11 @@ public class BasicEnemyVehicle : MonoBehaviour
         // Set stats
         health = maxHealth;
         startPosition = transform.position;
+    }
+
+    private void Start()
+    {
+        movementSpeed = TrainManager.Instance.speed - 2;
     }
 
     public void Update()
@@ -77,7 +82,7 @@ public class BasicEnemyVehicle : MonoBehaviour
         if (isBacking)
         {
             // Making go backward
-            transform.Translate(Time.deltaTime * 30 * Vector3.right);
+            transform.Translate(Time.deltaTime * (movementSpeed + 2) * Vector3.right);
 
             // Destroy it
             if (transform.position.x >= startPosition.x) {
@@ -119,9 +124,9 @@ public class BasicEnemyVehicle : MonoBehaviour
         if (isExplosion)
         {
             // Explosion
-            Destroy(gameObject);
             SpawnerOfEnemies.Instance.vehicleOnField.Remove(gameObject);
             Debug.Log("Health of vehicle is at 0 OR bum bum = Explosion");
+            Destroy(gameObject, 1.5f);
         }
         else
         {
@@ -163,7 +168,7 @@ public class BasicEnemyVehicle : MonoBehaviour
         }
         else if (other.CompareTag("Obstacle"))
         {
-            if(Random.value > changeOfDodging)
+            if(Random.value < changeOfDodging)
             {
                 // Vehicle dodging the obstacle
                 originalPosition = transform.position;
@@ -184,14 +189,25 @@ public class BasicEnemyVehicle : MonoBehaviour
     private IEnumerator Dodge(float offset)
     {
         float startTime = Time.time;
-        Vector3 targetPosition = originalPosition + transform.right * offset;
+        Vector3 targetPosition = originalPosition + transform.forward * offset;
+        Vector3 returnPosition = transform.position; // Store the current position as the return position
 
-        while (Time.time < startTime + dodgeDuration)
+        float halfDodgeDuration = dodgeDuration / 2f; // Calculate the half dodge duration
+
+        while (Time.time < startTime + halfDodgeDuration)
         {
             transform.position = Vector3.Lerp(originalPosition, targetPosition, (Time.time - startTime) / dodgeDuration);
             yield return null;
         }
 
-        transform.position = originalPosition;
+        startTime = Time.time; // Reset the start time for the return phase
+
+        while (Time.time < startTime + halfDodgeDuration)
+        {
+            transform.position = Vector3.Lerp(targetPosition, returnPosition, (Time.time - startTime) / dodgeDuration);
+            yield return null;
+        }
+
+        transform.position = originalPosition; // Set the position to the original position
     }
 }
