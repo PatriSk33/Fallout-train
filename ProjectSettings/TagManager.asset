@@ -4,7 +4,14 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - vagon
+  - Obstacle
+  - Bullet
+  - Nakladac
+  - Vehicle
+  - Driver
+  - Attacker
+  - Defenser
+  - Truck
   layers:
   - Default
   - TransparentFX

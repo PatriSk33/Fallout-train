@@ -19,7 +19,7 @@ public class Driver : Shooter
         if (currentHealth <= 0)
         {
             SpawnerOfEnemies.Instance.driversOnField.Remove(gameObject);
-            Destroy(gameObject);
+            Destroy(gameObject, 1);
         }
     }
 }

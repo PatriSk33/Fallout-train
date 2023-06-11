@@ -22,7 +22,6 @@ public class Nakladac : MonoBehaviour
     private Vector3 GoAwayPoition;
     private bool canGoBack;
 
-    int index;
 
     private void Awake()
     {
@@ -31,9 +30,8 @@ public class Nakladac : MonoBehaviour
     private void Start()
     {
         //Get the position of Wagon to attack
-        index = Random.Range(0, TrainManager.Instance.vagonsToAttack.Count);
-        positionOfWagon = TrainManager.Instance.vagonsToAttack[index].transform.position;
-        movementSpeed = TrainManager.Instance.speed + 1;
+        positionOfWagon = TruckManager.Instance.transform.position;
+        movementSpeed = TruckManager.Instance.speed + 1;
     }
 
     private void Update()
@@ -54,22 +52,22 @@ public class Nakladac : MonoBehaviour
         }
     }
 
-    public void StartTransfer(vagon vagon)
+    public void StartTransfer(TruckManager truck)
     {
-        StartCoroutine(Transfer(vagon));
+        StartCoroutine(Transfer(truck));
     }
 
-    IEnumerator Transfer(vagon vagon)
+    IEnumerator Transfer(TruckManager truck)
     {
         while (canTransfer)
         {
-            while (vagon.inventory > 0 && inventory < maxInv)
+            while (truck.inventory > 0 && inventory < maxInv)
             {
-                vagon.inventory--;
+                truck.inventory--;
                 inventory++;
                 yield return new WaitForSeconds(2);
             }
-            if (vagon.inventory == 0 || inventory == maxInv)
+            if (truck.inventory == 0 || inventory == maxInv)
             {
                 GoBack();
             }
@@ -93,9 +91,9 @@ public class Nakladac : MonoBehaviour
     {
         if (Mathf.Abs(transform.position.x - positionOfWagon.x) <= 0.1f)
         {
-            if (other.CompareTag("vagon") && !startedTransfering)
+            if (other.CompareTag("Truck") && !startedTransfering)
             {
-                StartTransfer(other.GetComponent<vagon>());
+                StartTransfer(other.GetComponent<TruckManager>());
                 startedTransfering = true;
             }
         }

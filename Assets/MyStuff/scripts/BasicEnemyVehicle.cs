@@ -45,7 +45,7 @@ public class BasicEnemyVehicle : MonoBehaviour
 
     private void Start()
     {
-        movementSpeed = TrainManager.Instance.speed - 2;
+        movementSpeed = TruckManager.Instance.speed - 2;
     }
 
     public void Update()
@@ -70,14 +70,15 @@ public class BasicEnemyVehicle : MonoBehaviour
         // Death because there is no one to drive the vehicle
         if (transform.GetChild(1) != null)
         {
-            if (!transform.GetChild(1).CompareTag("Driver")) {
-                driver = false;
+            if (transform.GetChild(1).CompareTag("Driver")) {
+                driver = true;
+            }
+            else
+            {
+                Death(false);
             }
         }
-        if (!driver)
-        {
-            Death(false);
-        }
+
 
         if (isBacking)
         {
@@ -104,9 +105,9 @@ public class BasicEnemyVehicle : MonoBehaviour
             //Destroy it
             if (transform.position.x >= startPosition.x)
             {
-                Destroy(gameObject);
                 SpawnerOfEnemies.Instance.vehicleOnField.Remove(gameObject);
                 SpawnerOfEnemies.Instance.driversOnField.Remove(transform.GetChild(1).gameObject);
+                Destroy(gameObject);
             }
         }
 

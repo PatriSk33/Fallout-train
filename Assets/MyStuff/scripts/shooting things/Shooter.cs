@@ -16,7 +16,7 @@ public class Shooter : MonoBehaviour
         }
         else
         {
-            TrainManager.Instance.defensers.Remove(o);
+            TruckManager.Instance.defensers.Remove(o);
         }
         Destroy(o);
     }

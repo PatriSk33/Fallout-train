@@ -95,7 +95,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1180709529648624776}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5
   m_Height: 2
@@ -115,14 +115,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startShootingTime: 5
   maxHealth: 40
+  criticalChange: 0
+  criticalMultiplier: 0
   damage: 5
   fireRate: 0
   maxAmmo: 1
-  bulletPrefab: {fileID: 3796342937348240760, guid: 154dd4465a9ff8140a9acec5eda6ffa9,
+  reloadTime: 5
+  bulletPrefab: {fileID: 3796342937348240760, guid: 9c64d5839e47c3b45ba521a5ca5c36fb,
     type: 3}
   bulletSpawnPoint: {fileID: 5557456816711610960}
   lookAt: {fileID: 9187670357451955525}
-  reloadTime: 5
 --- !u!54 &-4420483433718690370
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -184,5 +186,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  isEnemy: 1
   isSniper: 0
+  isEnemy: 1
+  minRange: 0
+  maxRange: 18

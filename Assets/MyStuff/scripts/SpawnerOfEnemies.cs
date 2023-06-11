@@ -17,9 +17,9 @@ public class SpawnerOfEnemies : MonoBehaviour
     public List<WaypointList> allWaypoints;
     public List<GameObject> enemiesToSpawn;
 
-    [HideInInspector] public List<GameObject> enemiesOnField, vehicleOnField, driversOnField;
+    public List<GameObject> enemiesOnField, vehicleOnField, driversOnField;
     [HideInInspector] public bool canSpawn = true;
-    int maxEnemiesOnField;
+    [SerializeField]int maxEnemiesOnField;  // Max enemies == amount of vagons
 
     // Keep track of used waypoints for each spawn point
     private List<List<Transform>> usedWaypoints;
@@ -32,8 +32,6 @@ public class SpawnerOfEnemies : MonoBehaviour
 
     private void Start()
     {
-        maxEnemiesOnField = TrainManager.Instance.vagonsToAttack.Count; // Max enemies == amount of vagons
-
         //Spawn Nakladac and EnemyVehicle
         SpawnNakladac();
         SpawnEnemy();
@@ -52,7 +50,7 @@ public class SpawnerOfEnemies : MonoBehaviour
 
     IEnumerator SpawnEnemyVehicle()
     {
-        while (!TrainManager.Instance.failed)
+        while (!GameplayManager.instance.failed)
         {
             yield return new WaitUntil(() => canSpawn == true);
 

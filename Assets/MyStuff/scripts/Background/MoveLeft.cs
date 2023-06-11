@@ -3,16 +3,15 @@ using UnityEngine;
 public class MoveLeft : MonoBehaviour
 {
     [HideInInspector]public float speed;
-    [SerializeField]private TrainManager playerCS;
     public Vector3 smer;
 
     private void Start()
     {
-        speed = TrainManager.Instance.speed;
+        speed = TruckManager.Instance.speed;
     }
     void Update()
     {
-        if (playerCS.failed == false)
+        if (!GameplayManager.instance.failed)
         {
             transform.Translate(smer * Time.deltaTime * speed);
         }

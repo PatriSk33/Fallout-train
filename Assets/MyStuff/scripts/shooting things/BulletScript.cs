@@ -47,10 +47,8 @@ public class BulletScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        // Check for collision with other objects
-        // Apply damage if necessary and handle any desired effects
+        // handle any desired effects
 
-        // Example: Destroy the bullet on collision
         if (other.CompareTag("Defenser"))
         {
             other.GetComponent<Defenser>().TakeDamage(damage);
