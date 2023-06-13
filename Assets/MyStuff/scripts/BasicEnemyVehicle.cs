@@ -10,7 +10,7 @@ public class BasicEnemyVehicle : MonoBehaviour
     public Transform destination;
     [HideInInspector] public float movementSpeed;
     public float turnSpeed = 30f;
-    private bool gettingToPosition = true;
+    //private bool gettingToPosition = true;
 
     // Death
     private Vector3 startPosition; // Backing positon
@@ -48,15 +48,11 @@ public class BasicEnemyVehicle : MonoBehaviour
         movementSpeed = TruckManager.Instance.speedOfTime - 2;
 
         // Movement
-        if (Mathf.Abs(transform.position.x - destination.position.x) > 0.1f && gettingToPosition)
+        if (!isBacking && !isGoingAway)
         {
-            transform.Translate(Time.deltaTime * movementSpeed * Vector3.left);
+            transform.position = Vector3.MoveTowards(transform.position, destination.position, 0.1f);
         }
-        else if (Mathf.Abs(transform.position.x - destination.position.x) <= 0.1f)
-        {
-            gettingToPosition = false;
-            //Activate an Animation when the car moves back and forth
-        }
+        
 
         // Death because of vehice not having health
         if (health <= 0)
@@ -92,19 +88,24 @@ public class BasicEnemyVehicle : MonoBehaviour
         if (isGoingAway)
         {
             // Rotate the car to the left gradually
-            transform.Rotate(Vector3.up, -turnSpeed * Time.deltaTime);
-            // Make it go Forward
-            transform.Translate(Time.deltaTime * movementSpeed * Vector3.left);
-
-            // Move the car slightly to the back of the scene
-            transform.Translate(Vector3.right * 10 * Time.deltaTime, Space.World);
-            
-            //Destroy it
-            if (transform.position.x >= startPosition.x)
+            if (Mathf.Abs(transform.eulerAngles.y) < 179f || Mathf.Abs(transform.eulerAngles.y) > 181f)
             {
-                SpawnerOfEnemies.Instance.driversOnField.Remove(transform.GetChild(1).gameObject);
-                SpawnerOfEnemies.Instance.vehicleOnField.Remove(gameObject);
-                Destroy(gameObject);
+                transform.Rotate(Vector3.up, -turnSpeed * Time.deltaTime);
+                transform.Translate(Time.deltaTime * (movementSpeed + 2) * Vector3.right, Space.World);
+
+            }
+            else
+            {
+                // Make it go Forward
+                transform.Translate(Time.deltaTime * (movementSpeed + 2) * Vector3.left);
+
+                //Destroy it
+                if (transform.position.x >= startPosition.x)
+                {
+                    SpawnerOfEnemies.Instance.driversOnField.Remove(transform.GetChild(1).gameObject);
+                    SpawnerOfEnemies.Instance.vehicleOnField.Remove(gameObject);
+                    Destroy(gameObject);
+                }
             }
         }
 

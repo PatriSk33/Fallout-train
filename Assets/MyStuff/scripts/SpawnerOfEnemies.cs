@@ -12,7 +12,7 @@ public class WaypointList
 public class SpawnerOfEnemies : MonoBehaviour
 {
     public static SpawnerOfEnemies Instance;
-    public GameObject nakladacPrefab, spawnPointForNakladac;
+    public GameObject nakladacPrefab, spawnPointForNakladac, waypointForNakladac;
     public List<GameObject> spawnPoints;
     public List<WaypointList> allWaypoints;
     public List<GameObject> enemiesToSpawn;
@@ -182,6 +182,7 @@ public class SpawnerOfEnemies : MonoBehaviour
 
     public void SpawnNakladac()
     {
-        Instantiate(nakladacPrefab, spawnPointForNakladac.transform.position - new Vector3(0, 1.12f, 0), Quaternion.identity);
+        GameObject vehicle = Instantiate(nakladacPrefab, spawnPointForNakladac.transform.position - new Vector3(0, 1.12f, 0), Quaternion.identity);
+        vehicle.GetComponent<Nakladac>().waypointPosition = waypointForNakladac.transform;
     }
 }

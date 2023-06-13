@@ -81,7 +81,7 @@ MonoBehaviour:
   indexOfLine: 0
   destination: {fileID: 0}
   movementSpeed: 8
-  turnSpeed: 30
+  turnSpeed: 50
   spawnpointIndex: 0
   maxHealth: 20
   driver: 1

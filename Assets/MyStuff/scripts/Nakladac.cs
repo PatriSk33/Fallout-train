@@ -15,7 +15,7 @@ public class Nakladac : MonoBehaviour
     public int maxHealth;
 
     // Movement
-    private Vector3 positionOfWagon;
+    public Transform waypointPosition;
     [HideInInspector] public float movementSpeed;
 
     // Going Back
@@ -27,20 +27,10 @@ public class Nakladac : MonoBehaviour
     {
         GoAwayPoition = transform.position;
     }
-    private void Start()
-    {
-        //Get the position of Wagon to attack
-        positionOfWagon = TruckManager.Instance.transform.position;
-    }
 
     private void Update()
     {
         movementSpeed = TruckManager.Instance.speedOfTime + 1;
-
-        if (Mathf.Abs(transform.position.x - positionOfWagon.x) > 0.1f)
-        {
-            transform.Translate(Time.deltaTime * movementSpeed * Vector3.left);
-        }
 
         if (canGoBack)
         {
@@ -50,6 +40,10 @@ public class Nakladac : MonoBehaviour
                 SpawnerOfEnemies.Instance.SpawnNakladac();
                 Destroy(gameObject);
             }
+        }
+        else
+        {
+            transform.position = Vector3.MoveTowards(transform.position, waypointPosition.position, 0.1f);
         }
     }
 
@@ -90,7 +84,7 @@ public class Nakladac : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (Mathf.Abs(transform.position.x - positionOfWagon.x) <= 0.1f)
+        if (Mathf.Abs(transform.position.x - waypointPosition.position.x) <= 0.1f)
         {
             if (other.CompareTag("Truck") && !startedTransfering)
             {

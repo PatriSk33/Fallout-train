@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -1779139537275114078}
   - component: {fileID: -1713639993651529412}
   m_Layer: 0
-  m_Name: "naklada\u010D"
+  m_Name: Enemy Nakladne Vehicle
   m_TagString: Nakladac
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -70,6 +70,8 @@ MonoBehaviour:
   maxInv: 5
   canTransfer: 1
   maxHealth: 10
+  waypointPosition: {fileID: 8041975525484930703, guid: 0470814d71d647e428fb2092efbfa992,
+    type: 3}
   movementSpeed: 8
 --- !u!65 &-1713639993651529412
 BoxCollider:
