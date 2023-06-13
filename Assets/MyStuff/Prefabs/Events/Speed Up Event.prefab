@@ -48,8 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
-  playerCS: {fileID: 4152957128951005461, guid: cd00604778d2e404c82c2f70aa187b32,
-    type: 3}
+  smer: {x: 1, y: 0, z: 0}
 --- !u!65 &5653225070558662533
 BoxCollider:
   m_ObjectHideFlags: 0

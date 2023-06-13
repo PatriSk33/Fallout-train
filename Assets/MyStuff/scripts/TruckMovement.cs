@@ -9,7 +9,7 @@ public class TruckMovement : MonoBehaviour
     private int currentLine;
 
     [Tooltip("Speed of left and right movement")] public float jumpSpeed = 100;
-    [Tooltip("Speed of forward and back movement")]public float speed = 20;
+    [Tooltip("Speed of forward and back movement")]public float speed = 12;
 
     private void Start()
     {
@@ -27,13 +27,18 @@ public class TruckMovement : MonoBehaviour
         {
             MoveRight();
         }
-        else if (Input.GetKey(KeyCode.UpArrow))
+
+        if (Input.GetKey(KeyCode.UpArrow))
         {
             MoveForward();
         }
         else if (Input.GetKey(KeyCode.DownArrow))
         {
             MoveBackward();
+        }
+        else
+        {
+            TruckManager.Instance.speedOfTime = 10;
         }
 
         transform.position = Vector3.MoveTowards(transform.position, new Vector3(transform.position.x, transform.position.y, z), Time.deltaTime * jumpSpeed);
@@ -58,10 +63,12 @@ public class TruckMovement : MonoBehaviour
 
     public void MoveForward()
     {
-        transform.Translate(Vector3.left * speed * Time.deltaTime);
+        //transform.Translate(Vector3.left * speed * Time.deltaTime);
+        TruckManager.Instance.speedOfTime = speed;
     }
     public void MoveBackward()
     {
-        transform.Translate(Vector3.right * speed * Time.deltaTime);
+        //transform.Translate(Vector3.right * speed * Time.deltaTime);
+        TruckManager.Instance.speedOfTime = 5;
     }
 }

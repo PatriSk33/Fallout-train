@@ -53,9 +53,9 @@ public class GameplayManager : MonoBehaviour
 
     public void Lost()
     {
-        failed = true;
-        end = true;
         continueToTownText.text = "Back to Town";
         failText.text = "Mission failed!";
+        failed = true;
+        end = true;
     }
 }

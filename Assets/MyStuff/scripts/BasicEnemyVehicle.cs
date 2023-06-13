@@ -43,13 +43,10 @@ public class BasicEnemyVehicle : MonoBehaviour
         startPosition = transform.position;
     }
 
-    private void Start()
-    {
-        movementSpeed = TruckManager.Instance.speedOfTime - 2;
-    }
-
     public void Update()
     {
+        movementSpeed = TruckManager.Instance.speedOfTime - 2;
+
         // Movement
         if (Mathf.Abs(transform.position.x - destination.position.x) > 0.1f && gettingToPosition)
         {
@@ -87,8 +84,8 @@ public class BasicEnemyVehicle : MonoBehaviour
 
             // Destroy it
             if (transform.position.x >= startPosition.x) {
-                Destroy(gameObject);
                 SpawnerOfEnemies.Instance.vehicleOnField.Remove(gameObject);
+                Destroy(gameObject);
             }
         }
 
@@ -105,8 +102,8 @@ public class BasicEnemyVehicle : MonoBehaviour
             //Destroy it
             if (transform.position.x >= startPosition.x)
             {
-                SpawnerOfEnemies.Instance.vehicleOnField.Remove(gameObject);
                 SpawnerOfEnemies.Instance.driversOnField.Remove(transform.GetChild(1).gameObject);
+                SpawnerOfEnemies.Instance.vehicleOnField.Remove(gameObject);
                 Destroy(gameObject);
             }
         }
@@ -125,6 +122,10 @@ public class BasicEnemyVehicle : MonoBehaviour
         if (isExplosion)
         {
             // Explosion
+            if (transform.GetChild(1) != null && transform.GetChild(1).CompareTag("Driver"))
+            {
+                SpawnerOfEnemies.Instance.driversOnField.Remove(transform.GetChild(1).gameObject);
+            }
             SpawnerOfEnemies.Instance.vehicleOnField.Remove(gameObject);
             Debug.Log("Health of vehicle is at 0 OR bum bum = Explosion");
             Destroy(gameObject, 1.5f);

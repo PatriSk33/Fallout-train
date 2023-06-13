@@ -31,11 +31,12 @@ public class Nakladac : MonoBehaviour
     {
         //Get the position of Wagon to attack
         positionOfWagon = TruckManager.Instance.transform.position;
-        movementSpeed = TruckManager.Instance.speedOfTime + 1;
     }
 
     private void Update()
     {
+        movementSpeed = TruckManager.Instance.speedOfTime + 1;
+
         if (Mathf.Abs(transform.position.x - positionOfWagon.x) > 0.1f)
         {
             transform.Translate(Time.deltaTime * movementSpeed * Vector3.left);

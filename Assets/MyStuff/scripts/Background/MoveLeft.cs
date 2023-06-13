@@ -5,12 +5,10 @@ public class MoveLeft : MonoBehaviour
     [HideInInspector]public float speed;
     public Vector3 smer;
 
-    private void Start()
-    {
-        speed = TruckManager.Instance.speedOfTime;
-    }
     void Update()
     {
+        speed = TruckManager.Instance.speedOfTime;
+
         if (!GameplayManager.instance.failed)
         {
             transform.Translate(smer * Time.deltaTime * speed);
