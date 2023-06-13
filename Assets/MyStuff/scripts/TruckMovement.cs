@@ -7,15 +7,14 @@ public class TruckMovement : MonoBehaviour
     private int leftLine, rightLine;
     private float z = 0;
     private int currentLine;
-    private int linesCount;
 
-    public float jumpSpeed = 100;
+    [Tooltip("Speed of left and right movement")] public float jumpSpeed = 100;
+    [Tooltip("Speed of forward and back movement")]public float speed = 20;
 
     private void Start()
     {
         leftLine = -2;
         rightLine = 2;
-        linesCount = Mathf.Abs(leftLine) + rightLine + 1;
     }
 
     private void Update()
@@ -27,6 +26,14 @@ public class TruckMovement : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             MoveRight();
+        }
+        else if (Input.GetKey(KeyCode.UpArrow))
+        {
+            MoveForward();
+        }
+        else if (Input.GetKey(KeyCode.DownArrow))
+        {
+            MoveBackward();
         }
 
         transform.position = Vector3.MoveTowards(transform.position, new Vector3(transform.position.x, transform.position.y, z), Time.deltaTime * jumpSpeed);
@@ -47,5 +54,14 @@ public class TruckMovement : MonoBehaviour
             currentLine++;
             z += 7f;
         }
+    }
+
+    public void MoveForward()
+    {
+        transform.Translate(Vector3.left * speed * Time.deltaTime);
+    }
+    public void MoveBackward()
+    {
+        transform.Translate(Vector3.right * speed * Time.deltaTime);
     }
 }

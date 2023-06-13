@@ -45,7 +45,7 @@ public class BasicEnemyVehicle : MonoBehaviour
 
     private void Start()
     {
-        movementSpeed = TruckManager.Instance.speed - 2;
+        movementSpeed = TruckManager.Instance.speedOfTime - 2;
     }
 
     public void Update()

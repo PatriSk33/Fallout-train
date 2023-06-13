@@ -9,8 +9,8 @@ public class TruckManager : MonoBehaviour
     public List<GameObject> defensers;
 
     //Stats
-    public float speed;
-    public int inventory;
+    public float speedOfTime;
+    [Tooltip("Amount of items in the truck")]public int inventory;
 
     private void Awake()
     {

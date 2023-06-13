@@ -31,7 +31,7 @@ public class Nakladac : MonoBehaviour
     {
         //Get the position of Wagon to attack
         positionOfWagon = TruckManager.Instance.transform.position;
-        movementSpeed = TruckManager.Instance.speed + 1;
+        movementSpeed = TruckManager.Instance.speedOfTime + 1;
     }
 
     private void Update()

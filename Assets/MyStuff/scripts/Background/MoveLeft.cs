@@ -7,7 +7,7 @@ public class MoveLeft : MonoBehaviour
 
     private void Start()
     {
-        speed = TruckManager.Instance.speed;
+        speed = TruckManager.Instance.speedOfTime;
     }
     void Update()
     {
