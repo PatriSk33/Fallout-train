@@ -8,7 +8,7 @@ public class BasicEnemyVehicle : MonoBehaviour
     [Header("Basic Stats")]
     [HideInInspector] public int indexOfLine;
     public Transform destination;
-    [HideInInspector] public float movementSpeed;
+    [HideInInspector] private float movementSpeed = 8;
     public float turnSpeed = 30f;
     //private bool gettingToPosition = true;
 
@@ -45,12 +45,10 @@ public class BasicEnemyVehicle : MonoBehaviour
 
     public void Update()
     {
-        movementSpeed = TruckManager.Instance.speedOfTime - 2;
-
         // Movement
         if (!isBacking && !isGoingAway)
         {
-            transform.position = Vector3.MoveTowards(transform.position, destination.position, 0.1f);
+            transform.position = Vector3.MoveTowards(transform.position, destination.position, Time.deltaTime * movementSpeed);
         }
         
 
@@ -91,13 +89,13 @@ public class BasicEnemyVehicle : MonoBehaviour
             if (Mathf.Abs(transform.eulerAngles.y) < 179f || Mathf.Abs(transform.eulerAngles.y) > 181f)
             {
                 transform.Rotate(Vector3.up, -turnSpeed * Time.deltaTime);
-                transform.Translate(Time.deltaTime * (movementSpeed + 2) * Vector3.right, Space.World);
+                transform.Translate(Time.deltaTime * (movementSpeed * 2) * Vector3.right, Space.World);
 
             }
             else
             {
                 // Make it go Forward
-                transform.Translate(Time.deltaTime * (movementSpeed + 2) * Vector3.left);
+                transform.Translate(Time.deltaTime * (movementSpeed * 2) * Vector3.left);
 
                 //Destroy it
                 if (transform.position.x >= startPosition.x)

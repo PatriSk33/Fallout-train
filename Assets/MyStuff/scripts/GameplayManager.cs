@@ -53,6 +53,8 @@ public class GameplayManager : MonoBehaviour
 
     public void Lost()
     {
+        Time.timeScale = 0;
+        continueToTown.gameObject.SetActive(true);
         continueToTownText.text = "Back to Town";
         failText.text = "Mission failed!";
         failed = true;

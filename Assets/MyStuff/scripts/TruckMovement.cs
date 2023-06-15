@@ -16,11 +16,17 @@ public class TruckMovement : MonoBehaviour
     private bool isIncreasingSpeed = false;
     private bool isDecreasingSpeed = false;
 
+    public GameObject enemyWaypointsList;
+    Vector3 startPos;
+
     private void Start()
     {
         leftLine = -2;
         rightLine = 2;
         normalDecelerationRate = decelerationRate; // Store the initial deceleration rate
+              
+        //get the current position of waypoints
+        startPos = enemyWaypointsList.transform.position;
     }
 
     private void Update()
@@ -70,6 +76,19 @@ public class TruckMovement : MonoBehaviour
             SlowDecreaseSpeed();
         }
         transform.position = Vector3.MoveTowards(transform.position, new Vector3(transform.position.x, transform.position.y, z), Time.deltaTime * jumpSpeed);
+
+
+
+        if (currentSpeed > 10)
+        {
+            // move anemies to the back
+            enemyWaypointsList.transform.position = Vector3.MoveTowards(enemyWaypointsList.transform.position, startPos + new Vector3(10, 0, 0), currentSpeed);
+        }
+        else
+        {
+            // move enemies to basic positions
+            enemyWaypointsList.transform.position = Vector3.MoveTowards(enemyWaypointsList.transform.position, startPos, currentSpeed);
+        }
     }
     public void MoveLeft()
     {
@@ -106,6 +125,14 @@ public class TruckMovement : MonoBehaviour
         {
             currentSpeed = Mathf.MoveTowards(currentSpeed, 0f, decelerationRate * 0.5f * Time.deltaTime);
             TruckManager.Instance.speedOfTime = currentSpeed;
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Obstacle"))
+        {
+            GameplayManager.instance.Lost();
         }
     }
 }
