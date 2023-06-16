@@ -11,6 +11,9 @@ public class TruckManager : MonoBehaviour
     //Stats
     public float speedOfTime;
     [Tooltip("Amount of items in the truck")]public int inventory;
+    public float maxHealth;
+
+    private float health;
 
     private void Awake()
     {
@@ -19,6 +22,7 @@ public class TruckManager : MonoBehaviour
 
     private void Start()
     {
+        health = maxHealth;
         //Get defensers
     }
 
@@ -27,6 +31,20 @@ public class TruckManager : MonoBehaviour
         if (defensers.Count == 0)
         {
             GameplayManager.instance.Lost();
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Obstacle"))
+        {
+            GameplayManager.instance.Lost();
+        }
+        else if (other.CompareTag("Vehicle"))
+        {
+            health--;
+            other.GetComponent<BasicEnemyVehicle>().DecreaseHealth(2);
+            other.GetComponent<BasicEnemyVehicle>().GotHitByTruck();
         }
     }
 }
