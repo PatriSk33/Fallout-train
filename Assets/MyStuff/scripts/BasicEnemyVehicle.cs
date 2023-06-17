@@ -38,6 +38,11 @@ public class BasicEnemyVehicle : MonoBehaviour
     public float dodgeDuration = 1.0f; // Duration of each dodge
     private Vector3 originalPosition; // Original position of the vehicle
 
+    //Hited by truck
+    [Header("Hitted by Truck")]
+    public Rigidbody rb;
+    public float force;
+
     private void Awake()
     {
         // Set stats
@@ -153,7 +158,7 @@ public class BasicEnemyVehicle : MonoBehaviour
                 // Randomly determine the dodge direction
                 float direction = Random.value < 0.5f ? -1f : 1f;
 
-                StartCoroutine(Dodge(direction * dodgeDistance, false));
+                StartCoroutine(Dodge(direction * dodgeDistance));
             }
             else
             {
@@ -173,7 +178,7 @@ public class BasicEnemyVehicle : MonoBehaviour
                 // Randomly determine the dodge direction
                 float direction = Random.value < 0.5f ? -1f : 1f;
 
-                StartCoroutine(Dodge(direction * dodgeDistance, false));
+                StartCoroutine(Dodge(direction * dodgeDistance));
             }
             else
             {
@@ -183,7 +188,7 @@ public class BasicEnemyVehicle : MonoBehaviour
         }
     }
 
-    private IEnumerator Dodge(float offset, bool hittedByTruck)
+    private IEnumerator Dodge(float offset)
     {
         isDodging = true;
 
@@ -192,22 +197,10 @@ public class BasicEnemyVehicle : MonoBehaviour
 
         float halfDodgeDuration = dodgeDuration / 2f; // Calculate the half dodge duration
 
-        if (!hittedByTruck)
+        while (Time.time < startTime + halfDodgeDuration)
         {
-            while (Time.time < startTime + halfDodgeDuration)
-            {
-                transform.position = Vector3.Lerp(originalPosition, targetPosition, (Time.time - startTime) / dodgeDuration);
-                yield return null;
-            }
-        }
-        else
-        {
-            targetPosition = transform.position + transform.forward * offset;
-            while (Time.time < startTime + halfDodgeDuration)
-            {
-                transform.position = Vector3.Lerp(transform.position, targetPosition, (Time.time - startTime) / dodgeDuration);
-                yield return null;
-            }
+            transform.position = Vector3.Lerp(originalPosition, targetPosition, (Time.time - startTime) / dodgeDuration);
+            yield return null;
         }
 
         isDodging = false;
@@ -215,12 +208,14 @@ public class BasicEnemyVehicle : MonoBehaviour
 
     public void GotHitByTruck()
     {
-        originalPosition = destination.position;
+        Debug.Log("Hitted by truck!");
 
         // Randomly determine the dodge direction
         float direction = spawnpointIndex < 2 ? 1f : -1f;
 
-        StartCoroutine(Dodge(direction * dodgeDistance, true));
+        rb.AddForce(force * direction * Vector3.forward);
+
+        // Add shake effect
     }
 
     public void DecreaseHealth(float damage)

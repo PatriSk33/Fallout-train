@@ -45,8 +45,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  isEnemy: 0
   isSniper: 1
+  isEnemy: 0
+  minRange: 0
+  maxRange: 18
+  parent: {fileID: 3664529390256287461}
 --- !u!1 &3664529390256287461
 GameObject:
   m_ObjectHideFlags: 0
@@ -82,6 +85,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3412981689898338349}
+  - {fileID: 1738141422039626934}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -163,14 +167,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startShootingTime: 10
   maxHealth: 10
+  criticalChange: 0
+  criticalMultiplier: 0
   damage: 50
   fireRate: 0
   maxAmmo: 1
+  reloadTime: 10
   bulletPrefab: {fileID: 4767491486326398790, guid: 0d0a8a2d84fe55646b5058783ad18b5f,
     type: 3}
-  bulletSpawnPoint: {fileID: 3412981689898338349}
+  bulletSpawnPoint: {fileID: 1738141422039626934}
   lookAt: {fileID: 7692630209939517057}
-  reloadTime: 10
 --- !u!54 &4994151986200857103
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -203,3 +209,34 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   isDragging: 0
+--- !u!1 &4107188875058139654
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1738141422039626934}
+  m_Layer: 0
+  m_Name: Hlaven
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1738141422039626934
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4107188875058139654}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3664529390256287457}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

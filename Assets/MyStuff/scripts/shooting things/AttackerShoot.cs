@@ -37,7 +37,7 @@ public class AttackerShoot : Shooter
         {
             if (currentAmmo > 0)
             {
-                Shoot(damage, fireRate, bulletSpawnPoint, bulletPrefab, criticalChange, criticalMultiplier);
+                Shoot(damage, bulletSpawnPoint, bulletPrefab, criticalChange, criticalMultiplier, lookAt.transform);
                 currentAmmo--;
             }
             else if (!isReloading)

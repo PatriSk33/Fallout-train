@@ -80,5 +80,10 @@ public class BulletScript : MonoBehaviour
                 gameObject.SetActive(false);
             }
         }
+
+        if (other.CompareTag("Truck"))
+        {
+            other.GetComponent<TruckManager>().TakeDamage(damage);
+        }
     }
 }

@@ -64,7 +64,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 84
   m_CollisionDetection: 0
 --- !u!114 &7236476955381511248
 MonoBehaviour:
@@ -80,15 +80,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   indexOfLine: 0
   destination: {fileID: 0}
-  movementSpeed: 8
   turnSpeed: 50
   spawnpointIndex: 0
   maxHealth: 20
   driver: 1
   enemiesOnVehicle: 0
   changeOfDodging: 0.568
-  dodgeDistance: 3
-  dodgeDuration: 1.2
+  dodgeDistance: 5
+  dodgeDuration: 2
+  rb: {fileID: 6899861706174303055}
+  force: 1000
 --- !u!1 &3719271586567096014
 GameObject:
   m_ObjectHideFlags: 0

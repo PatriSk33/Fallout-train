@@ -11,32 +11,42 @@ public class SpawnerOfObstacles : MonoBehaviour
 
     private void Start()
     {
-        InvokeRepeating("SpawnObstalce", startTime, repeatTime);
+        StartCoroutine(SpawnObstalce());
     }
 
-    void SpawnObstalce()
+    IEnumerator SpawnObstalce()
     {
-        int obsIndex = 0;
-        int listIndex = Random.Range(0, 3); // Amount of different types of obstacle lists
-        int waypointIndex = Random.Range(0, waypoints.Count);
+        yield return new WaitForSeconds(startTime);
 
-        switch (listIndex)
+        while (true)
         {
-            case 0:
-                obsIndex = Random.Range(0, smallObstacles.Count);
-                Instantiate(smallObstacles[obsIndex], waypoints[waypointIndex].transform.position, Quaternion.identity);
-                break;
-            case 1:
-                obsIndex = Random.Range(0, smallObstacles.Count);
-                Instantiate(mediumObstacles[obsIndex], waypoints[waypointIndex].transform.position, Quaternion.identity);
-                break;
-            case 2:
-                obsIndex = Random.Range(0, smallObstacles.Count);
-                Instantiate(bigObstacles[obsIndex], waypoints[waypointIndex].transform.position, Quaternion.identity);
-                break;
-            default:
-                Debug.Log("Wrong amount of different types of obstacles!");
-                break;
+            int obsIndex = 0;
+            int listIndex = Random.Range(0, 3); // Amount of different types of obstacle lists
+            int waypointIndex = Random.Range(0, waypoints.Count);
+
+            switch (listIndex)
+            {
+                case 0:
+                    obsIndex = Random.Range(0, smallObstacles.Count);
+                    Instantiate(smallObstacles[obsIndex], waypoints[waypointIndex].transform.position, Quaternion.identity);
+                    repeatTime = 5;
+                    break;
+                case 1:
+                    obsIndex = Random.Range(0, smallObstacles.Count);
+                    Instantiate(mediumObstacles[obsIndex], waypoints[waypointIndex].transform.position, Quaternion.identity);
+                    repeatTime = 10;
+                    break;
+                case 2:
+                    obsIndex = Random.Range(0, smallObstacles.Count);
+                    Instantiate(bigObstacles[obsIndex], waypoints[waypointIndex].transform.position, Quaternion.identity);
+                    repeatTime = 20;
+                    break;
+                default:
+                    Debug.Log("Wrong amount of different types of obstacles!");
+                    break;
+            }
+
+            yield return new WaitForSeconds(repeatTime);
         }
     }
 }

@@ -21,11 +21,14 @@ public class Shooter : MonoBehaviour
         Destroy(o);
     }
 
-    public void Shoot(float damage, float fireRate, Transform t, GameObject bulletPrefab, float criticalChange, float criticalMultiplier)
+    public void Shoot(float damage, Transform hlaven, GameObject bulletPrefab, float criticalChange, float criticalMultiplier, Transform lookAt = null)
     {
         GameObject bullet = BulletPool.Instance.GetBullet(bulletPrefab);
-        bullet.transform.position = t.position;     //Hlaven zbrane
-        bullet.transform.rotation = t.rotation;     //Hlaven zbrane
+        bullet.transform.position = hlaven.position;     //Hlaven zbrane
+        if (lookAt != null)
+        {
+            bullet.transform.LookAt(lookAt);     // look at the target
+        }
 
         BulletScript bulletScript = bullet.GetComponent<BulletScript>();
 

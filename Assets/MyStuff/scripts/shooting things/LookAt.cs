@@ -18,6 +18,8 @@ public class LookAt : MonoBehaviour
     public float minRange = 0;  // Minimum range for selecting the target
     public float maxRange = 18; // Maximum range for selecting the target
 
+    public GameObject parent;
+
     private void Start()
     {
         truck = TruckManager.Instance;
@@ -30,11 +32,11 @@ public class LookAt : MonoBehaviour
         {
             if (!isSniper)
             {
-                if (target != null && Vector3.Distance(transform.position, target.position) < maxRange + 1)
+                if (target != null && Vector3.Distance(parent.transform.position, target.position) < maxRange + 1)
                 {
-                    transform.LookAt(target);
+                    transform.position = target.position;
                 }
-                else if (target != null && Vector3.Distance(transform.position, target.position) > maxRange + 1)
+                else if (target != null && Vector3.Distance(parent.transform.position, target.position) > maxRange + 1)
                 {
                     target = null;
                 }
@@ -47,7 +49,7 @@ public class LookAt : MonoBehaviour
             {
                 if (target != null)
                 {
-                    transform.LookAt(target);
+                    transform.position = target.position;
                 }
                 else
                 {
@@ -64,7 +66,7 @@ public class LookAt : MonoBehaviour
             if (isEnemy && truck.defensers.Count > 0)
             {
                 target = truck.defensers[Random.Range(0, truck.defensers.Count)].transform;
-                if(Vector3.Distance(transform.position, target.position) > maxRange)
+                if (Vector3.Distance(transform.position, target.position) > maxRange)
                 {
                     target = null;
                 }
