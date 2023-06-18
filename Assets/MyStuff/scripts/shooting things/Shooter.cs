@@ -21,13 +21,17 @@ public class Shooter : MonoBehaviour
         Destroy(o);
     }
 
-    public void Shoot(float damage, Transform hlaven, GameObject bulletPrefab, float criticalChange, float criticalMultiplier, Transform lookAt = null)
+    public void Shoot(float damage, Transform hlaven, GameObject bulletPrefab, float criticalChange, float criticalMultiplier, Transform lookAt)
     {
         GameObject bullet = BulletPool.Instance.GetBullet(bulletPrefab);
         bullet.transform.position = hlaven.position;     //Hlaven zbrane
-        if (lookAt != null)
+        if (Random.value < 0.9)
         {
             bullet.transform.LookAt(lookAt);     // look at the target
+        }
+        else
+        {
+            bullet.transform.LookAt(lookAt.position - new Vector3(0, 1.5f, 0));     // look at the target vehicle
         }
 
         BulletScript bulletScript = bullet.GetComponent<BulletScript>();

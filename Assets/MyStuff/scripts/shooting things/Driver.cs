@@ -1,15 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class Driver : Shooter
+public class Driver : MonoBehaviour
 {
     public int maxHealth = 100;
     private float currentHealth;
+    public Slider healthBar;
 
     private void Start()
     {
         currentHealth = maxHealth;
+        healthBar.maxValue = maxHealth;
+    }
+
+    private void Update()
+    {
+        // Health bar
+        healthBar.value = currentHealth;
     }
 
     public void TakeDamage(float damage)

@@ -9,7 +9,6 @@ public class LookAt : MonoBehaviour
     [Header("Sniper")]
     public bool isSniper;
 
-    private TruckManager truck;
     private SpawnerOfEnemies spawner;
 
     private float startTime;
@@ -22,7 +21,6 @@ public class LookAt : MonoBehaviour
 
     private void Start()
     {
-        truck = TruckManager.Instance;
         spawner = SpawnerOfEnemies.Instance;
         startTime = Time.time + 4;
     }
@@ -63,9 +61,9 @@ public class LookAt : MonoBehaviour
     {
         if (target == null)
         {
-            if (isEnemy && truck.defensers.Count > 0)
+            if (isEnemy && TruckManager.Instance.defensers.Count > 0)
             {
-                target = truck.defensers[Random.Range(0, truck.defensers.Count)].transform;
+                target = TruckManager.Instance.defensers[Random.Range(0, TruckManager.Instance.defensers.Count)].transform;
                 if (Vector3.Distance(transform.position, target.position) > maxRange)
                 {
                     target = null;

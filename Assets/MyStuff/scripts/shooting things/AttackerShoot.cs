@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AttackerShoot : Shooter
 {
@@ -8,6 +9,7 @@ public class AttackerShoot : Shooter
 
     public int maxHealth = 100;
     private float currentHealth;
+    public Slider healthBar;
 
     [Range(0, 1)] public float criticalChange;
     public float criticalMultiplier;
@@ -26,7 +28,11 @@ public class AttackerShoot : Shooter
 
     private void Start()
     {
+        //Health
         currentHealth = maxHealth;
+        healthBar.maxValue = maxHealth;
+
+        // Ammo
         currentAmmo = maxAmmo;
         nextFireTime = Time.time + startShootingTime;
     }
@@ -47,6 +53,9 @@ public class AttackerShoot : Shooter
 
             nextFireTime = Time.time + fireRate;
         }
+
+        // Health bar
+        healthBar.value = currentHealth;
     }
 
     private IEnumerator Reload()
