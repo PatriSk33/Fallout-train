@@ -1,0 +1,1160 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3102062283045437076
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3473497037123998479}
+  m_Layer: 0
+  m_Name: Palete 2 Gas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3473497037123998479
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3102062283045437076}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 42.26, y: 0, z: 6.21}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3387220022015564662}
+  - {fileID: 5724360357019432444}
+  - {fileID: 7235445587532459150}
+  - {fileID: 2883390405143898193}
+  - {fileID: 7711914795214955940}
+  - {fileID: 1129932219532807402}
+  - {fileID: 301892371130208215}
+  - {fileID: 4895557859467318804}
+  - {fileID: 6752009330130356243}
+  - {fileID: 2776421046823456314}
+  - {fileID: 802786422470555819}
+  - {fileID: 5064259619858439509}
+  - {fileID: 7791442507921151314}
+  - {fileID: 5761572222098822789}
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &268580997059094588
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 3473497037123998479}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 87.80456
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.87612534
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.4561955
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.08500004
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_Name
+      value: Gas Bomb 1 (4)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: ed3934c1209f3ef4db7c4e98e0310bfc, type: 3}
+--- !u!4 &301892371130208215 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+    type: 3}
+  m_PrefabInstance: {fileID: 268580997059094588}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &586851276960623361
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 3473497037123998479}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 87.80456
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.14399719
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.4561955
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.45499992
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_Name
+      value: Gas Bomb 1 (3)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: ed3934c1209f3ef4db7c4e98e0310bfc, type: 3}
+--- !u!4 &1129932219532807402 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+    type: 3}
+  m_PrefabInstance: {fileID: 586851276960623361}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &913853050892869440
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 3473497037123998479}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 07da05cdfb7224841b223a64865416aa,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 07da05cdfb7224841b223a64865416aa,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.9580002
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 07da05cdfb7224841b223a64865416aa,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.48
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 07da05cdfb7224841b223a64865416aa,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.8579998
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 07da05cdfb7224841b223a64865416aa,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 07da05cdfb7224841b223a64865416aa,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 07da05cdfb7224841b223a64865416aa,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 07da05cdfb7224841b223a64865416aa,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 07da05cdfb7224841b223a64865416aa,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 07da05cdfb7224841b223a64865416aa,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 07da05cdfb7224841b223a64865416aa,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 07da05cdfb7224841b223a64865416aa,
+        type: 3}
+      propertyPath: m_Name
+      value: Gas Bomb 2 (3)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 07da05cdfb7224841b223a64865416aa, type: 3}
+--- !u!4 &802786422470555819 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 07da05cdfb7224841b223a64865416aa,
+    type: 3}
+  m_PrefabInstance: {fileID: 913853050892869440}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2381679925840701905
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 3473497037123998479}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 07da05cdfb7224841b223a64865416aa,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 07da05cdfb7224841b223a64865416aa,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.4239998
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 07da05cdfb7224841b223a64865416aa,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.48
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 07da05cdfb7224841b223a64865416aa,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.5879998
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 07da05cdfb7224841b223a64865416aa,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 07da05cdfb7224841b223a64865416aa,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 07da05cdfb7224841b223a64865416aa,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 07da05cdfb7224841b223a64865416aa,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 07da05cdfb7224841b223a64865416aa,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 07da05cdfb7224841b223a64865416aa,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 07da05cdfb7224841b223a64865416aa,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 07da05cdfb7224841b223a64865416aa,
+        type: 3}
+      propertyPath: m_Name
+      value: Gas Bomb 2 (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 07da05cdfb7224841b223a64865416aa, type: 3}
+--- !u!4 &2776421046823456314 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 07da05cdfb7224841b223a64865416aa,
+    type: 3}
+  m_PrefabInstance: {fileID: 2381679925840701905}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2921547344021912733
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 3473497037123998479}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 07da05cdfb7224841b223a64865416aa,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 07da05cdfb7224841b223a64865416aa,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.7199974
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 07da05cdfb7224841b223a64865416aa,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.48
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 07da05cdfb7224841b223a64865416aa,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.1199999
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 07da05cdfb7224841b223a64865416aa,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 07da05cdfb7224841b223a64865416aa,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 07da05cdfb7224841b223a64865416aa,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 07da05cdfb7224841b223a64865416aa,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 07da05cdfb7224841b223a64865416aa,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 07da05cdfb7224841b223a64865416aa,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 07da05cdfb7224841b223a64865416aa,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 07da05cdfb7224841b223a64865416aa,
+        type: 3}
+      propertyPath: m_Name
+      value: Gas Bomb 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 07da05cdfb7224841b223a64865416aa, type: 3}
+--- !u!4 &3387220022015564662 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 07da05cdfb7224841b223a64865416aa,
+    type: 3}
+  m_PrefabInstance: {fileID: 2921547344021912733}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3425380276642140090
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 3473497037123998479}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 87.80456
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.1760025
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.4561955
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.0050001
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_Name
+      value: Gas Bomb 1 (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: ed3934c1209f3ef4db7c4e98e0310bfc, type: 3}
+--- !u!4 &2883390405143898193 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+    type: 3}
+  m_PrefabInstance: {fileID: 3425380276642140090}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4741556172538591934
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 3473497037123998479}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 07da05cdfb7224841b223a64865416aa,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 07da05cdfb7224841b223a64865416aa,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.070999146
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 07da05cdfb7224841b223a64865416aa,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.48
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 07da05cdfb7224841b223a64865416aa,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.3509998
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 07da05cdfb7224841b223a64865416aa,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 07da05cdfb7224841b223a64865416aa,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 07da05cdfb7224841b223a64865416aa,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 07da05cdfb7224841b223a64865416aa,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 07da05cdfb7224841b223a64865416aa,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 07da05cdfb7224841b223a64865416aa,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 07da05cdfb7224841b223a64865416aa,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 07da05cdfb7224841b223a64865416aa,
+        type: 3}
+      propertyPath: m_Name
+      value: Gas Bomb 2 (4)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 07da05cdfb7224841b223a64865416aa, type: 3}
+--- !u!4 &5064259619858439509 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 07da05cdfb7224841b223a64865416aa,
+    type: 3}
+  m_PrefabInstance: {fileID: 4741556172538591934}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4934320740617335295
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 3473497037123998479}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 87.80456
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.2460022
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.4561955
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0050001144
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_Name
+      value: Gas Bomb 1 (5)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: ed3934c1209f3ef4db7c4e98e0310bfc, type: 3}
+--- !u!4 &4895557859467318804 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+    type: 3}
+  m_PrefabInstance: {fileID: 4934320740617335295}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5224050316089504110
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 3473497037123998479}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 28.72004
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.7609978
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.64619553
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.315
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.98854864
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.003693875
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.0005637003
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.1508566
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -0.409
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -0.128
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 17.354
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_Name
+      value: Gas Bomb 1 (6)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: ed3934c1209f3ef4db7c4e98e0310bfc, type: 3}
+--- !u!4 &5761572222098822789 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+    type: 3}
+  m_PrefabInstance: {fileID: 5224050316089504110}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5259001598113600023
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 3473497037123998479}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 87.80456
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.80612564
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.4561955
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.085
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_Name
+      value: Gas Bomb 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: ed3934c1209f3ef4db7c4e98e0310bfc, type: 3}
+--- !u!4 &5724360357019432444 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+    type: 3}
+  m_PrefabInstance: {fileID: 5259001598113600023}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6501313072235704312
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 3473497037123998479}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 07da05cdfb7224841b223a64865416aa,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 07da05cdfb7224841b223a64865416aa,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.20100021
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 07da05cdfb7224841b223a64865416aa,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.48
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 07da05cdfb7224841b223a64865416aa,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.6589999
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 07da05cdfb7224841b223a64865416aa,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 07da05cdfb7224841b223a64865416aa,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 07da05cdfb7224841b223a64865416aa,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 07da05cdfb7224841b223a64865416aa,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 07da05cdfb7224841b223a64865416aa,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 07da05cdfb7224841b223a64865416aa,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 07da05cdfb7224841b223a64865416aa,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 07da05cdfb7224841b223a64865416aa,
+        type: 3}
+      propertyPath: m_Name
+      value: Gas Bomb 2 (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 07da05cdfb7224841b223a64865416aa, type: 3}
+--- !u!4 &6752009330130356243 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 07da05cdfb7224841b223a64865416aa,
+    type: 3}
+  m_PrefabInstance: {fileID: 6501313072235704312}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7197823198559685477
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 3473497037123998479}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: bd145524f70393c46b96fc11e4ff1275,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bd145524f70393c46b96fc11e4ff1275,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.051151276
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bd145524f70393c46b96fc11e4ff1275,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.026172608
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bd145524f70393c46b96fc11e4ff1275,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.07999992
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bd145524f70393c46b96fc11e4ff1275,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bd145524f70393c46b96fc11e4ff1275,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bd145524f70393c46b96fc11e4ff1275,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bd145524f70393c46b96fc11e4ff1275,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bd145524f70393c46b96fc11e4ff1275,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bd145524f70393c46b96fc11e4ff1275,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bd145524f70393c46b96fc11e4ff1275,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bd145524f70393c46b96fc11e4ff1275,
+        type: 3}
+      propertyPath: m_Name
+      value: Pallete wooden 1 (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: bd145524f70393c46b96fc11e4ff1275, type: 3}
+--- !u!4 &7235445587532459150 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bd145524f70393c46b96fc11e4ff1275,
+    type: 3}
+  m_PrefabInstance: {fileID: 7197823198559685477}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7758148356403737273
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 3473497037123998479}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 07da05cdfb7224841b223a64865416aa,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 07da05cdfb7224841b223a64865416aa,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.5360031
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 07da05cdfb7224841b223a64865416aa,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.48
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 07da05cdfb7224841b223a64865416aa,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.2979999
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 07da05cdfb7224841b223a64865416aa,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 07da05cdfb7224841b223a64865416aa,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 07da05cdfb7224841b223a64865416aa,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 07da05cdfb7224841b223a64865416aa,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 07da05cdfb7224841b223a64865416aa,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 07da05cdfb7224841b223a64865416aa,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 07da05cdfb7224841b223a64865416aa,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 07da05cdfb7224841b223a64865416aa,
+        type: 3}
+      propertyPath: m_Name
+      value: Gas Bomb 2 (5)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 07da05cdfb7224841b223a64865416aa, type: 3}
+--- !u!4 &7791442507921151314 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 07da05cdfb7224841b223a64865416aa,
+    type: 3}
+  m_PrefabInstance: {fileID: 7758148356403737273}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7821768322002747983
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 3473497037123998479}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 87.80456
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.48612595
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.4561955
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.53499985
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+        type: 3}
+      propertyPath: m_Name
+      value: Gas Bomb 1 (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: ed3934c1209f3ef4db7c4e98e0310bfc, type: 3}
+--- !u!4 &7711914795214955940 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ed3934c1209f3ef4db7c4e98e0310bfc,
+    type: 3}
+  m_PrefabInstance: {fileID: 7821768322002747983}
+  m_PrefabAsset: {fileID: 0}
