@@ -26,8 +26,10 @@ public class TruckManager : MonoBehaviour
         //Get defensers
     }
 
-    private void Update()
+    public void RemoveDefender(GameObject defender)
     {
+        defensers.Remove(defender);
+
         if (defensers.Count == 0)
         {
             GameplayManager.instance.Lost();

@@ -1511,7 +1511,6 @@ GameObject:
   m_Component:
   - component: {fileID: 942675157}
   - component: {fileID: 942675156}
-  - component: {fileID: 942675158}
   m_Layer: 0
   m_Name: Gameplay Manager
   m_TagString: Untagged
@@ -1553,22 +1552,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &942675158
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 942675155}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ab65d44d4fc90345ad536e2a4be1efb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  events:
-  - {fileID: 5653225070558662529, guid: aca813547490e364492744f909cbd33b, type: 3}
-  - {fileID: 5653225070558662529, guid: 8c6918aa253ec1448bd2881634240e8a, type: 3}
-  repeatTime: 30
 --- !u!1001 &1015328454
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2835,7 +2818,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1954183261}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e3bde16c262e81547acbb582d405db31, type: 3}
   m_Name: 

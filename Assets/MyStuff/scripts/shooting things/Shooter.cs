@@ -4,21 +4,21 @@ using UnityEngine;
 
 public class Shooter : MonoBehaviour
 {
-    public void Death(bool isEnemy, GameObject o)
+    public void Death(bool isEnemy, GameObject shooterObject)
     {
         //Death animation
         Debug.Log("Death");
 
         if (isEnemy)
         {
-            SpawnerOfEnemies.Instance.enemiesOnField.Remove(o);
+            SpawnerOfEnemies.Instance.enemiesOnField.Remove(shooterObject);
             transform.parent.GetComponent<BasicEnemyVehicle>().enemiesOnVehicle--;
         }
         else
         {
-            TruckManager.Instance.defensers.Remove(o);
+            TruckManager.Instance.RemoveDefender(shooterObject);
         }
-        Destroy(o);
+        Destroy(shooterObject);
     }
 
     public void Shoot(float damage, Transform hlaven, GameObject bulletPrefab, float criticalChange, float criticalMultiplier, Transform lookAt)

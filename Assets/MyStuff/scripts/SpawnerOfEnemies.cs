@@ -19,7 +19,7 @@ public class SpawnerOfEnemies : MonoBehaviour
 
     public List<GameObject> enemiesOnField, vehicleOnField, driversOnField;
     [HideInInspector] public bool canSpawn = true;
-    [SerializeField]int maxEnemiesOnField;  // Max enemies == amount of vagons
+    [SerializeField]int maxEnemiesOnField;
 
     // Keep track of used waypoints for each spawn point
     private List<List<Transform>> usedWaypoints;
